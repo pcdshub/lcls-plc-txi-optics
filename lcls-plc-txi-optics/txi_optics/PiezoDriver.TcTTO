@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <Task Name="PiezoDriver" Id="{186c51d6-1529-4816-9eaa-e62b5a75ad83}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>1000</CycleTime>
+    <Priority>3</Priority>
+    <PouCall>
+      <Name>PiezoSerial</Name>
+    </PouCall>
+    <TaskFBGuid>{20e1b111-bb45-4018-b2f8-35834e2cc2a7}</TaskFBGuid>
+    <Fb_init>{f647c336-ad03-4fed-a64d-481d2a74119d}</Fb_init>
+    <Fb_exit>{13da0530-6820-467d-a827-ad3eadba43fc}</Fb_exit>
+    <CycleUpdate>{2469cc5f-80c7-402e-8c50-67337f35d894}</CycleUpdate>
+    <PostCycleUpdate>{d6bbeb66-fa44-4685-aa7b-c4d46a4f70b6}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

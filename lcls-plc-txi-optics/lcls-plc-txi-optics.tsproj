@@ -6,6 +6,12 @@
 				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
 					<Name>PlcTask</Name>
 				</Task>
+				<Task Id="6" Priority="3" CycleTime="10000" AmsPort="351" AdtTasks="true">
+					<Name>PiezoDriver</Name>
+				</Task>
+				<Task Id="7" Priority="1" CycleTime="20000" AmsPort="352" AdtTasks="true">
+					<Name>SerialIO</Name>
+				</Task>
 			</Tasks>
 		</System>
 		<Motion>
