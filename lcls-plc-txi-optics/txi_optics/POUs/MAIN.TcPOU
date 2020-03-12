@@ -168,7 +168,7 @@ VAR
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[// M1L0
+      <ST><![CDATA[// M1K3
 M1K3.fbRunHOMS(bBenderIncluded:=FALSE,
                stYup:=M1,
                stYdwn:=M2,
