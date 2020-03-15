@@ -122,7 +122,7 @@ VAR
 	{attribute 'pytmc' := '
 		pv: MR2K3:MMS:PITCH
 	'}
-	M10 : DUT_MotionStage := (fVelocity:=50.0); // M2K3 Pitch Stepper
+	M10 : DUT_MotionStage := (fVelocity:=50.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M2K3 Pitch Stepper
 
 	{attribute 'TcLinkTo' := '.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M2K3_STO]^Channel 1^Input;
 	                          .fbRunHOMS.bSTOEnable2:=TIIB[EL1004_M2K3_STO]^Channel 2^Input;
@@ -161,6 +161,9 @@ VAR
 	fbM2K3PitchControl : FB_PitchControl;
 	bM2K3PitchDone : BOOL;
 	bM2K3PitchBusy : BOOL;
+
+	// Lost serial comm to E621 controller, unsure why...
+	fbMotionStage_m10 : FB_MotionStage;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -259,6 +262,8 @@ fbPitchRMSErrorM2K3(stMotionStage:=M10,
 	                fMaxRMSError=>fMaxPitchRMSErrorM2K3,
 					fMinRMSError=>fMinPitchRMSErrorM2K3);
 
+(*
+3-15-20: Lost serial comm with E621 controller, unsure why....
 // Pitch Control
 fbM2K3PitchControl(Pitch:=GVL_M2K3.M2K3_Pitch,
 				   Stepper:=M10,
@@ -268,7 +273,9 @@ fbM2K3PitchControl(Pitch:=GVL_M2K3.M2K3_Pitch,
 // When STO hit, need to reset SP
 IF NOT M10.bHardwareEnable THEN
 	M10.fPosition := M10.stAxisStatus.fActPosition;
-END_IF]]></ST>
+END_IF
+*)
+fbMotionStage_m10(stMotionStage:=M10);]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
