@@ -23,12 +23,10 @@
 		<Axis File="M1K3-Xup.xti" Id="3"/>
 		<Axis File="M1K3-Xdwn.xti" Id="4"/>
 		<Axis File="M1K3-Pitch.xti" Id="5"/>
-		<Axis File="Axis-None1.xti" Id="11"/>
 		<Axis File="M2K3-Yup.xti" Id="6"/>
 		<Axis File="M2K3-Ydwn.xti" Id="7"/>
 		<Axis File="M2K3-Xup.xti" Id="8"/>
 		<Axis File="M2K3-Xdwn.xti" Id="9"/>
 		<Axis File="M2K3-Pitch.xti" Id="10"/>
-		<Axis File="Axis-None2.xti" Id="12"/>
 	</NC>
 </TcSmItem>

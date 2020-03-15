@@ -161,21 +161,15 @@ VAR
 	fbM2K3PitchControl : FB_PitchControl;
 	bM2K3PitchDone : BOOL;
 	bM2K3PitchBusy : BOOL;
-
-	// Bender placeholders - will want to fix FB and remove
-	M_None1 : DUT_MotionStage;
-	M_None2 : DUT_MotionStage;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[// M1K3
-M1K3.fbRunHOMS(bBenderIncluded:=FALSE,
-               stYup:=M1,
+M1K3.fbRunHOMS(stYup:=M1,
                stYdwn:=M2,
                stXup:=M3,
                stXdwn:=M4,
                stPitch:=M5,
-               stBender:=M_None1,
 	           nYupEncRef:=GVL_M1K3_Constants.nYUP_ENC_REF,
                nYdwnEncRef:=GVL_M1K3_Constants.nYDWN_ENC_REF,
                nXupEncRef:=GVL_M1K3_Constants.nXUP_ENC_REF,
@@ -224,13 +218,11 @@ IF NOT M5.bHardwareEnable THEN
 END_IF
 
 // M2K3
-M2K3.fbRunHOMS(bBenderIncluded:=FALSE,
-               stYup:=M6,
+M2K3.fbRunHOMS(stYup:=M6,
                stYdwn:=M7,
                stXup:=M8,
                stXdwn:=M9,
 			   stPitch:=M10,
-               stBender:=M_None2,
 	           nYupEncRef:=GVL_M2K3_Constants.nYUP_ENC_REF,
                nYdwnEncRef:=GVL_M2K3_Constants.nYDWN_ENC_REF,
                nXupEncRef:=GVL_M2K3_Constants.nXUP_ENC_REF,
