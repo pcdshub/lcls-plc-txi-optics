@@ -1,12 +1,12 @@
-#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.2.0/bin/rhel7-x86_64/adsIoc
+#!/reg/g/pcds/epics/ioc/common/ads-ioc/R0.2.1/bin/rhel7-x86_64/adsIoc
 
 < envPaths
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
 epicsEnvSet("IOCNAME", "ioc-txi-optics" )
-epicsEnvSet("ENGINEER", "root" )
-epicsEnvSet("LOCATION", "PREFIX" )
+epicsEnvSet("ENGINEER", "sheppard" )
+epicsEnvSet("LOCATION", "PLC:TXI:OPTICS" )
 epicsEnvSet("IOCSH_PS1", "$(IOCNAME)> " )
 
 # Run common startup commands for linux soft IOC's
@@ -55,7 +55,7 @@ cd "$(ADS_IOC_TOP)/db"
 
 
 epicsEnvSet("MOTOR_PORT",     "PLC_ADS")
-epicsEnvSet("PREFIX",         "PREFIX:")
+epicsEnvSet("PREFIX",         "PLC:TXI:OPTICS:")
 epicsEnvSet("NUMAXES",        "10")
 epicsEnvSet("MOVE_POLL_RATE", "200")
 epicsEnvSet("IDLE_POLL_RATE", "1000")
@@ -238,8 +238,8 @@ dbLoadRecords("EthercatMCreadback.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME
 dbLoadRecords("EthercatMCdebug.template", "PREFIX=$(MOTOR_PREFIX), MOTOR_NAME=$(MOTOR_NAME), MOTOR_PORT=$(MOTOR_PORT), AXIS_NO=$(AXIS_NO), PREC=3")
 
 
-dbLoadRecords("iocSoft.db", "IOC=PREFIX")
-dbLoadRecords("save_restoreStatus.db", "P=PREFIX:")
+dbLoadRecords("iocSoft.db", "IOC=PLC:TXI:OPTICS")
+dbLoadRecords("save_restoreStatus.db", "P=PLC:TXI:OPTICS:")
 
 cd "$(IOC_TOP)"
 
@@ -251,7 +251,7 @@ cd "$(IOC_TOP)"
 set_savefile_path( "$(IOC_DATA)/$(IOC)/autosave" )
 set_requestfile_path( "$(IOC_TOP)/autosave" )
 
-save_restoreSet_status_prefix( "PREFIX:" )
+save_restoreSet_status_prefix( "PLC:TXI:OPTICS:" )
 save_restoreSet_IncompleteSetsOk( 1 )
 save_restoreSet_DatedBackupFiles( 1 )
 set_pass0_restoreFile( "info_positions.sav" )
