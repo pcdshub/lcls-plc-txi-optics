@@ -775,15 +775,15 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{FC468251-C219-4051-BF5A-9646F099293D}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{CBF01177-DBDE-4059-9406-1D7A6847A343}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{871669A7-4DD8-4DEE-A1E4-18C7B9B023A9}"/>
+				<Hide GUID="{FC468251-C219-4051-BF5A-9646F099293D}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
 				<![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
@@ -805,7 +805,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{FC468251-C219-4051-BF5A-9646F099293D}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{CBF01177-DBDE-4059-9406-1D7A6847A343}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
 					<![CDATA[ Status struct placeholder]]>
 				</Comment>
@@ -822,7 +822,7 @@ External Setpoint Generation:
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{83463420-BA4D-43EF-BFB5-CE50F7699425}"/>
+				<Hide GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -1040,18 +1040,18 @@ External Setpoint Generation:
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
 				<Var>
+					<Name>lcls_twincat_motion.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
+					<Comment>
+						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
 					<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
 					<Comment>
 						<![CDATA[Raw encoder count]]>
 					</Comment>
 					<Type>LINT</Type>
-				</Var>
-				<Var>
-					<Name>lcls_twincat_optics.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
 				<Var>
 					<Name>MAIN.M1.Axis.NcToPlc</Name>
@@ -1129,6 +1129,27 @@ External Setpoint Generation:
 						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M1.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M1.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M1.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>MAIN.fbMotionStage_m1.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -1257,6 +1278,27 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>MAIN.M2.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M2.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M2.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>MAIN.fbMotionStage_m2.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -1381,6 +1423,27 @@ External Setpoint Generation:
 						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M3.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M3.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M3.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>MAIN.fbMotionStage_m3.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -1509,6 +1572,27 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>MAIN.M4.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M4.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M4.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>MAIN.fbMotionStage_m4.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -1635,6 +1719,27 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>MAIN.M5.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M5.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M5.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>MAIN.M1K3.fbRunHOMS.bSTOEnable1</Name>
 					<Comment>
 						<![CDATA[ STO Button]]>
@@ -1650,7 +1755,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -1672,7 +1777,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M1K3.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -1694,7 +1799,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M1K3.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -1716,7 +1821,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M1K3.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -1891,6 +1996,27 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>MAIN.M6.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M6.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M6.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>MAIN.fbMotionStage_m6.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -2015,6 +2141,27 @@ External Setpoint Generation:
 						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M7.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M7.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M7.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>MAIN.fbMotionStage_m7.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -2143,6 +2290,27 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>MAIN.M8.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M8.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M8.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>MAIN.fbMotionStage_m8.fbDriveVirtual.MasterAxis.NcToPlc</Name>
 					<Type GUID="{6A65C767-34E5-42BF-AD87-E1A503EAC7BE}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 					<SubVar>
@@ -2267,6 +2435,27 @@ External Setpoint Generation:
 						<![CDATA[ NC STO Input: TRUE if ok to move]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M9.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M9.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M9.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>MAIN.fbMotionStage_m9.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -2395,6 +2584,27 @@ External Setpoint Generation:
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>MAIN.M10.nRawEncoderULINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for ULINT (Biss-C)]]>
+					</Comment>
+					<Type>ULINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M10.nRawEncoderUINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for UINT (Relative Encoders)]]>
+					</Comment>
+					<Type>UINT</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.M10.nRawEncoderINT</Name>
+					<Comment>
+						<![CDATA[ Raw encoder IO for INT (LVDT)]]>
+					</Comment>
+					<Type>INT</Type>
+				</Var>
+				<Var>
 					<Name>MAIN.M2K3.fbRunHOMS.bSTOEnable1</Name>
 					<Comment>
 						<![CDATA[ STO Button]]>
@@ -2410,7 +2620,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2432,7 +2642,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M2K3.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2454,7 +2664,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M2K3.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2476,7 +2686,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M2K3.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{9114AB8C-373A-4931-8D96-C7EC424CD1F6}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2794,10 +3004,29 @@ External Setpoint Generation:
 					<Type GUID="{63A84524-72E3-41C8-BEAB-4CCE44690A13}" Namespace="MC">PLCTONC_AXIS_REF</Type>
 				</Var>
 			</Vars>
+			<Vars VarGrpType="8">
+				<Name>PlcTask Retains</Name>
+				<Var>
+					<Name>PMPS_GVL.SuccessfulPreemption</Name>
+					<Comment>
+						<![CDATA[ Any time BPTM applies a new BP request which is confirmed]]>
+					</Comment>
+					<Type>UDINT</Type>
+					<InOut>7</InOut>
+				</Var>
+				<Var>
+					<Name>PMPS_GVL.AccumulatedFF</Name>
+					<Comment>
+						<![CDATA[ Any time a FF occurs]]>
+					</Comment>
+					<Type>UDINT</Type>
+					<InOut>7</InOut>
+				</Var>
+			</Vars>
 			<TaskPouOids>
 				<TaskPouOid Prio="1" OTCID="#x08502001"/>
-				<TaskPouOid Prio="3" OTCID="#x08502002"/>
 				<TaskPouOid Prio="20" OTCID="#x08502003"/>
+				<TaskPouOid Prio="3" OTCID="#x08502002"/>
 			</TaskPouOids>
 		</Instance>
 	</Project>
