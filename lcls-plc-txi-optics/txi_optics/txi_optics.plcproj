@@ -86,10 +86,10 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryReference Include="lcls-twincat-motion,1.6.0,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,2.0.1,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-optics,0.0.0,SLAC">
+    <LibraryReference Include="lcls-twincat-optics,0.4.1,SLAC">
       <Namespace>lcls_twincat_optics</Namespace>
     </LibraryReference>
   </ItemGroup>
