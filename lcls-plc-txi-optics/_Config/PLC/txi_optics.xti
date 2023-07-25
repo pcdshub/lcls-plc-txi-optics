@@ -58,24 +58,6 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{18071995-0000-0000-0000-000000000041}" TcBaseType="true" HideSubItems="true" CName="AmsNetId">AMSNETID</Name>
-			<BitSize>48</BitSize>
-			<BaseType GUID="{18071995-0000-0000-0000-000000000001}">BYTE</BaseType>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>6</Elements>
-			</ArrayInfo>
-			<Format>
-				<Printf>%d.%d.%d.%d.%d.%d</Printf>
-				<Parameter>[0]</Parameter>
-				<Parameter>[1]</Parameter>
-				<Parameter>[2]</Parameter>
-				<Parameter>[3]</Parameter>
-				<Parameter>[4]</Parameter>
-				<Parameter>[5]</Parameter>
-			</Format>
-		</DataType>
-		<DataType>
 			<Name GUID="{4C3FC5AC-D5AA-44C6-AC5A-159774BA0F6D}" Namespace="MC" TcBaseType="true" HideType="true" IecDeclaration="DWORD;">NCTOPLC_AXIS_REF_STATE</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
@@ -775,15 +757,15 @@ External Setpoint Generation:
 			</Relations>
 		</DataType>
 		<DataType>
-			<Name GUID="{C099218E-798D-4AC4-A3D3-4B166EF645EB}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
+			<Name GUID="{54815C8E-7351-4202-9348-4CBCA6858449}" Namespace="lcls_twincat_motion" AutoDeleteType="true">EL5042_Status</Name>
 			<BitSize>0</BitSize>
 			<BaseType GUID="{FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF}"/>
 			<Hides>
-				<Hide GUID="{CBF01177-DBDE-4059-9406-1D7A6847A343}"/>
+				<Hide GUID="{C099218E-798D-4AC4-A3D3-4B166EF645EB}"/>
 			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
+			<Name GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion" AutoDeleteType="true">ST_RenishawAbsEnc</Name>
 			<Comment>
 				<![CDATA[ Renishaw BiSS-C absolute encoder used with an EL5042]]>
 			</Comment>
@@ -805,7 +787,7 @@ External Setpoint Generation:
 			</SubItem>
 			<SubItem>
 				<Name>Status</Name>
-				<Type GUID="{C099218E-798D-4AC4-A3D3-4B166EF645EB}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
+				<Type GUID="{54815C8E-7351-4202-9348-4CBCA6858449}" Namespace="lcls_twincat_motion">EL5042_Status</Type>
 				<Comment>
 					<![CDATA[ Status struct placeholder]]>
 				</Comment>
@@ -822,7 +804,7 @@ External Setpoint Generation:
 				<BitOffs>64</BitOffs>
 			</SubItem>
 			<Hides>
-				<Hide GUID="{2F0ECD17-9481-4B13-BF18-C92042549CDA}"/>
+				<Hide GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}"/>
 			</Hides>
 		</DataType>
 		<DataType>
@@ -1039,13 +1021,6 @@ External Setpoint Generation:
 			</Vars>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
-				<Var>
-					<Name>lcls_twincat_motion.LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
 				<Var>
 					<Name>lcls_twincat_optics.GVL_TestStructs.TestPitch_LimitSwitches.diEncCnt</Name>
 					<Comment>
@@ -1755,7 +1730,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -1777,7 +1752,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M1K3.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -1799,7 +1774,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M1K3.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -1821,7 +1796,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M1K3.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2620,7 +2595,7 @@ External Setpoint Generation:
 					<Comment>
 						<![CDATA[ Encoders]]>
 					</Comment>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2642,7 +2617,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M2K3.fbRunHOMS.stYdwnEnc</Name>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2664,7 +2639,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M2K3.fbRunHOMS.stXupEnc</Name>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -2686,7 +2661,7 @@ External Setpoint Generation:
 				</Var>
 				<Var>
 					<Name>MAIN.M2K3.fbRunHOMS.stXdwnEnc</Name>
-					<Type GUID="{3A09665C-5ACC-47D9-BE5E-3C9865EC2466}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
+					<Type GUID="{5EDFEB9A-E402-4E3C-BAED-C9B6AE5F5D70}" Namespace="lcls_twincat_motion">ST_RenishawAbsEnc</Type>
 					<SubVar>
 						<Name>Count</Name>
 						<Comment>
@@ -3030,8 +3005,8 @@ External Setpoint Generation:
 			</Vars>
 			<TaskPouOids>
 				<TaskPouOid Prio="1" OTCID="#x08502001"/>
-				<TaskPouOid Prio="3" OTCID="#x08502002"/>
 				<TaskPouOid Prio="20" OTCID="#x08502003"/>
+				<TaskPouOid Prio="3" OTCID="#x08502002"/>
 			</TaskPouOids>
 		</Instance>
 	</Project>
