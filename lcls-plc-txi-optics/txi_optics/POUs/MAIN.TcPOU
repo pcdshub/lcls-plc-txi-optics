@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
   <POU Name="MAIN" Id="{e3d7110e-5126-4a60-b62c-14650dc5481c}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MAIN
 VAR
@@ -164,6 +164,58 @@ VAR
 
 	// Lost serial comm to E621 controller, unsure why...
 	fbMotionStage_m10 : FB_MotionStage;
+  
+    // MR1K3 Flow Press Sensors
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 1^Value'}
+    fMR1K3_Flow_1 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+        pv: MR1K3:SOMS:FWM:1
+        field: EGU lpm
+        io: i
+    '}
+    fMR1K3_Flow_1_val : LREAL;
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 2^Value'}
+    fMR1K3_Flow_2 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+        pv: MR1K3:SOMS:FWM:2
+        field: EGU lpm
+        io: i
+    '}
+    fMR1K3_Flow_2_val : LREAL;
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 3^Value'}
+    fMR1K3_Press_1 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+        pv: MR1K3:SOMS:PRSM:1
+        field: EGU bar
+        io: i
+    '}
+    fMR1K3_Press_1_val : LREAL;
+
+    // MR2K3 Flow Press Sensors
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 1^Value'}
+    fMR2K3_Flow_1 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+        pv: MR2K3:SOMS:FWM:1
+        field: EGU lpm
+        io: i
+    '}
+    fMR2K3_Flow_1_val : LREAL;
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 2^Value'}
+    fMR2K3_Flow_2 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+        pv: MR2K3:SOMS:FWM:2
+        field: EGU lpm
+        io: i
+    '}
+    fMR2K3_Flow_2_val : LREAL;
+    {attribute 'TcLinkTo' := '.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 3^Value'}
+    fMR2K3_Press_1 : FB_AnalogInput;
+    {attribute 'pytmc' := '
+        pv: MR2K3:SOMS:PRSM:1
+        field: EGU bar
+        io: i
+    '}
+    fMR2K3_Press_1_val : LREAL;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -275,7 +327,27 @@ IF NOT M10.bHardwareEnable THEN
 	M10.fPosition := M10.stAxisStatus.fActPosition;
 END_IF
 *)
-fbMotionStage_m10(stMotionStage:=M10);]]></ST>
+fbMotionStage_m10(stMotionStage:=M10);
+
+// MR1K3 Flow Pressure Sensors
+fMR1K3_Flow_1(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
+fMR1K3_Flow_1_val := fMR1K3_Flow_1.fReal;
+
+fMR1K3_Flow_2(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
+fMR1K3_Flow_2_val := fMR1K3_Flow_2.fReal;
+
+fMR1K3_Press_1(iTermBits:=15, fTermMax:=4.0, fTermMin:=0);
+fMR1K3_Press_1_val := fMR1K3_Press_1.fReal;
+
+// MR2K3 Flow Pressure Sensors
+fMR2K3_Flow_1(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
+fMR2K3_Flow_1_val := fMR2K3_Flow_1.fReal;
+
+fMR2K3_Flow_2(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
+fMR2K3_Flow_2_val := fMR2K3_Flow_2.fReal;
+
+fMR2K3_Press_1(iTermBits:=15, fTermMax:=4.0, fTermMin:=0);
+fMR2K3_Press_1_val := fMR2K3_Press_1.fReal;]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
