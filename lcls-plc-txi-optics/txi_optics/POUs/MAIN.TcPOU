@@ -82,6 +82,15 @@ VAR
     bM1K3PitchDone : BOOL;
     bM1K3PitchBusy : BOOL;
 
+    {attribute 'TcLinkTo' := 'TIIB[EL2004_M1K3_VCV]^Channel 1^Output'}
+    {attribute 'pytmc' := '
+        pv: MR1K3:SOMS:VCV
+        io: io
+        field: ZNAM OFF
+        field: ONAM ON
+    '}
+    bActivateVarCoolMR1K3 AT %Q* : BOOL;
+
 
     // M2K3
     // Motors
@@ -216,6 +225,14 @@ VAR
         io: i
     '}
     fMR2K3_Press_1_val : LREAL;
+    {attribute 'TcLinkTo' := 'TIIB[EL2004_M2K3_VCV]^Channel 1^Output'}
+    {attribute 'pytmc' := '
+        pv: MR2K3:SOMS:VCV
+        io: io
+        field: ZNAM OFF
+        field: ONAM ON
+    '}
+    bActivateVarCoolMR2K3 AT %Q* : BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
