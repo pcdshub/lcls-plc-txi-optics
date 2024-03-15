@@ -316,24 +316,8 @@ END_IF
 fbMotionStage_m10(stMotionStage:=M10);
 
 // MR1K3 Flow Pressure Sensors
-fMR1K3_Flow_1(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
-fMR1K3_Flow_1_val := fMR1K3_Flow_1.fReal;
-
-fMR1K3_Flow_2(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
-fMR1K3_Flow_2_val := fMR1K3_Flow_2.fReal;
-
-fMR1K3_Press_1(iTermBits:=15, fTermMax:=4.0, fTermMin:=0);
-fMR1K3_Press_1_val := fMR1K3_Press_1.fReal;
-
-// MR2K3 Flow Pressure Sensors
-fMR2K3_Flow_1(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
-fMR2K3_Flow_1_val := fMR2K3_Flow_1.fReal;
-
-fMR2K3_Flow_2(iTermBits:=15, fTermMax:=5.0427, fTermMin:=0.050472);
-fMR2K3_Flow_2_val := fMR2K3_Flow_2.fReal;
-
-fMR2K3_Press_1(iTermBits:=15, fTermMax:=4.0, fTermMin:=0);
-fMR2K3_Press_1_val := fMR2K3_Press_1.fReal;]]></ST>
+fbCoolingPanelMR1K3();
+fbCoolingPanelMR2K3();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>
