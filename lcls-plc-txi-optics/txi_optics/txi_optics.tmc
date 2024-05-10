@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{527D3EC5-EFCE-89C4-7DDB-AE1D89F0A176}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{33E4FB78-763E-12F5-35C7-8A60FF4A9712}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -1096,7 +1096,7 @@
       <SubItem>
         <Name>sAxis</Name>
         <Type>STRING(80)</Type>
-        <Comment>Axis, e.g. A, B, C...A if single unit	</Comment>
+        <Comment>Axis, e.g. A, B, C...A if single unit</Comment>
         <BitSize>648</BitSize>
         <BitOffs>800</BitOffs>
         <Default>
@@ -3289,8 +3289,8 @@
         <Comment> Hard limits, egu INC 
  These are discovered during installation, and represent encoder ticks, unbiased 
  We changed to these when our pitch mechanism limit switches were insufficient for
-	good control. They had too much hysteresis/ lack of precision. At this point the limit
-	switches are ignored, and instead their function is carried out by these. </Comment>
+    good control. They had too much hysteresis/ lack of precision. At this point the limit
+    switches are ignored, and instead their function is carried out by these. </Comment>
         <BitSize>64</BitSize>
         <BitOffs>2304</BitOffs>
       </SubItem>
@@ -3488,31 +3488,31 @@
         <Name>bBusy</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80134608</GetCodeOffs>
+        <GetCodeOffs>80134716</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>bError</Name>
         <Type>BOOL</Type>
         <BitSize>8</BitSize>
-        <GetCodeOffs>80134644</GetCodeOffs>
+        <GetCodeOffs>80134752</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>hrErrorCode</Name>
         <Type GUID="{18071995-0000-0000-0000-000000000019}">HRESULT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80134652</GetCodeOffs>
+        <GetCodeOffs>80134760</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nStringSize</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80134632</GetCodeOffs>
+        <GetCodeOffs>80134740</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sResult</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80134648</GetCodeOffs>
+        <GetCodeOffs>80134756</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -4764,15 +4764,15 @@
         <Name>nId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80134544</GetCodeOffs>
-        <SetCodeOffs>80134568</SetCodeOffs>
+        <GetCodeOffs>80134652</GetCodeOffs>
+        <SetCodeOffs>80134676</SetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80134584</GetCodeOffs>
-        <SetCodeOffs>80134596</SetCodeOffs>
+        <GetCodeOffs>80134692</GetCodeOffs>
+        <SetCodeOffs>80134704</SetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -5013,31 +5013,31 @@
         <Name>eSeverity</Name>
         <Type GUID="{B57D3F4A-0836-49B0-81C3-BED5F4817EC9}">TcEventSeverity</Type>
         <BitSize>16</BitSize>
-        <GetCodeOffs>80134700</GetCodeOffs>
+        <GetCodeOffs>80134808</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>ipSourceInfo</Name>
         <Type Namespace="LCLS_General.Tc3_EventLogger">I_TcSourceInfo</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80134680</GetCodeOffs>
+        <GetCodeOffs>80134788</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nEventId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80134768</GetCodeOffs>
+        <GetCodeOffs>80134876</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>nUniqueId</Name>
         <Type>UDINT</Type>
         <BitSize>32</BitSize>
-        <GetCodeOffs>80134772</GetCodeOffs>
+        <GetCodeOffs>80134880</GetCodeOffs>
       </PropertyItem>
       <PropertyItem>
         <Name>sEventClassName</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80134728</GetCodeOffs>
+        <GetCodeOffs>80134836</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -5049,7 +5049,7 @@
         <Name>sEventText</Name>
         <Type>STRING(255)</Type>
         <BitSize>2048</BitSize>
-        <GetCodeOffs>80134776</GetCodeOffs>
+        <GetCodeOffs>80134884</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcEncoding</Name>
@@ -5642,7 +5642,7 @@
         <Name>nTimeSent</Name>
         <Type>ULINT</Type>
         <BitSize>64</BitSize>
-        <GetCodeOffs>80134804</GetCodeOffs>
+        <GetCodeOffs>80134912</GetCodeOffs>
         <Properties>
           <Property>
             <Name>TcDisplayTypeGUID</Name>
@@ -36460,7 +36460,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stYup</Name>
-        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">DUT_MotionStage</Type>
+        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">ST_MotionStage</Type>
         <Comment> Motor Structs</Comment>
         <BitSize>32</BitSize>
         <BitOffs>640</BitOffs>
@@ -36473,7 +36473,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stYdwn</Name>
-        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">DUT_MotionStage</Type>
+        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">ST_MotionStage</Type>
         <BitSize>32</BitSize>
         <BitOffs>672</BitOffs>
         <Properties>
@@ -36485,7 +36485,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stXup</Name>
-        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">DUT_MotionStage</Type>
+        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">ST_MotionStage</Type>
         <BitSize>32</BitSize>
         <BitOffs>704</BitOffs>
         <Properties>
@@ -36497,7 +36497,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stXdwn</Name>
-        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">DUT_MotionStage</Type>
+        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">ST_MotionStage</Type>
         <BitSize>32</BitSize>
         <BitOffs>736</BitOffs>
         <Properties>
@@ -36509,7 +36509,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stPitch</Name>
-        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">DUT_MotionStage</Type>
+        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">ST_MotionStage</Type>
         <BitSize>32</BitSize>
         <BitOffs>768</BitOffs>
         <Properties>
@@ -36682,9 +36682,9 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: COUPLE_Y
-		io: o
-	</Value>
+        pv: COUPLE_Y
+        io: o
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -36697,9 +36697,9 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: DECOUPLE_Y
-		io: o
-	</Value>
+        pv: DECOUPLE_Y
+        io: o
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -36712,9 +36712,9 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: COUPLE_X
-		io: o
-	</Value>
+        pv: COUPLE_X
+        io: o
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -36727,9 +36727,9 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: DECOUPLE_X
-		io: o
-	</Value>
+        pv: DECOUPLE_X
+        io: o
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -36743,10 +36743,10 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: ALREADY_COUPLED_Y
-		io: i
+        pv: ALREADY_COUPLED_Y
+        io: i
         field: ZSV MAJOR
-	</Value>
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -36759,10 +36759,10 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: ALREADY_COUPLED_X
-		io: i
+        pv: ALREADY_COUPLED_X
+        io: i
         field: ZSV MAJOR
-	</Value>
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -36790,10 +36790,10 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: GANTRY_Y
-		field: EGU um
-		io: i
-	</Value>
+        pv: GANTRY_Y
+        field: EGU um
+        io: i
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -36807,10 +36807,10 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: GANTRY_X
-		field: EGU um
-		io: i
-	</Value>
+        pv: GANTRY_X
+        field: EGU um
+        io: i
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -37332,7 +37332,7 @@ External Setpoint Generation:
       </SubItem>
       <SubItem>
         <Name>stMotionStage</Name>
-        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">DUT_MotionStage</Type>
+        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">ST_MotionStage</Type>
         <BitSize>32</BitSize>
         <BitOffs>192</BitOffs>
         <Properties>
@@ -37424,8 +37424,8 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: MEAN
-		io: i
+        pv: MEAN
+        io: i
     </Value>
           </Property>
         </Properties>
@@ -37439,8 +37439,8 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: STDEV
-		io: i
+        pv: STDEV
+        io: i
     </Value>
           </Property>
         </Properties>
@@ -37457,8 +37457,8 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: RMS
-		io: i
+        pv: RMS
+        io: i
     </Value>
           </Property>
         </Properties>
@@ -37501,8 +37501,8 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: ACTPOSARRAY
-		io: i
+        pv: ACTPOSARRAY
+        io: i
     </Value>
           </Property>
         </Properties>
@@ -37520,9 +37520,9 @@ External Setpoint Generation:
           <Property>
             <Name>pytmc</Name>
             <Value>
-		pv: SETPOSARRAY
-		io: i
-	</Value>
+        pv: SETPOSARRAY
+        io: i
+    </Value>
           </Property>
         </Properties>
       </SubItem>
@@ -40179,7 +40179,7 @@ Use this thing to have a simple indexer with rollover.
       </SubItem>
       <SubItem>
         <Name>Stepper</Name>
-        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">DUT_MotionStage</Type>
+        <Type Namespace="lcls_twincat_motion" ReferenceTo="true">ST_MotionStage</Type>
         <BitSize>32</BitSize>
         <BitOffs>64</BitOffs>
         <Properties>
@@ -40192,7 +40192,7 @@ Use this thing to have a simple indexer with rollover.
       <SubItem>
         <Name>lrCurrentSetpoint</Name>
         <Type>LREAL</Type>
-        <Comment> Setpoint: Epics writes to DUT_MotionStage which gets fed into this</Comment>
+        <Comment> Setpoint: Epics writes to ST_MotionStage which gets fed into this</Comment>
         <BitSize>64</BitSize>
         <BitOffs>128</BitOffs>
         <Properties>
@@ -40540,6 +40540,124 @@ Use this thing to have a simple indexer with rollover.
         <Type>LREAL</Type>
         <BitSize>64</BitSize>
         <BitOffs>384</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</Name>
+      <BitSize>1088</BitSize>
+      <SubItem>
+        <Name>fFlow_1_val</Name>
+        <Type>LREAL</Type>
+        <Comment> Mirrors with 1 Cooling Flow Meter and 1 Pressure Meter</Comment>
+        <BitSize>64</BitSize>
+        <BitOffs>64</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: FWM:1
+        field: EGU lpm
+        field: HIGH 2.3
+        field: HIHI 3.0
+        field: LOW 1.7
+        field: LOLO 1.5
+        field: LSV MINOR
+        field: LLSV MAJOR
+        field: HSV MINOR
+        field: HHSV MAJOR
+        io: i
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fPress_1_val</Name>
+        <Type>LREAL</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>128</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: PRSM:1
+        field: EGU bar
+        field: LOW 0.1
+        field: LSV MAJOR
+        io: i
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbFlow_1</Name>
+        <Type Namespace="LCLS_General">FB_AnalogInput</Type>
+        <BitSize>448</BitSize>
+        <BitOffs>192</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbPress_1</Name>
+        <Type Namespace="LCLS_General">FB_AnalogInput</Type>
+        <BitSize>448</BitSize>
+        <BitOffs>640</BitOffs>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="lcls_twincat_optics">FB_Axilon_Cooling_2f1p</Name>
+      <BitSize>1600</BitSize>
+      <ExtendsType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_1f1p</ExtendsType>
+      <SubItem>
+        <Name>fFlow_2_val</Name>
+        <Type>LREAL</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>1088</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: FWM:2
+        field: EGU lpm
+        field: HIGH 2.3
+        field: HIHI 3.0
+        field: LOW 1.7
+        field: LOLO 1.5
+        field: LSV MINOR
+        field: LLSV MAJOR
+        field: HSV MINOR
+        field: HHSV MAJOR
+        io: i
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbFlow_2</Name>
+        <Type Namespace="LCLS_General">FB_AnalogInput</Type>
+        <BitSize>448</BitSize>
+        <BitOffs>1152</BitOffs>
       </SubItem>
       <Properties>
         <Property>
@@ -41146,7 +41264,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640904704</BitOffs>
+            <BitOffs>640905152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComIn_M2K3</Name>
@@ -41162,7 +41280,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905088</BitOffs>
+            <BitOffs>640905536</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -41183,7 +41301,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640904896</BitOffs>
+            <BitOffs>640905344</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_SerialIO.Serial_stComOut_M2K3</Name>
@@ -41198,7 +41316,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905280</BitOffs>
+            <BitOffs>640905728</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -41210,13 +41328,13 @@ Use this thing to have a simple indexer with rollover.
             <Name>P_Serial_Com.fbSerialLineControl_EL6001_M1K3</Name>
             <BitSize>10432</BitSize>
             <BaseType Namespace="Tc2_SerialCom">SerialLineControl</BaseType>
-            <BitOffs>640867744</BitOffs>
+            <BitOffs>640868192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>P_Serial_Com.fbSerialLineControl_EL6001_M2K3</Name>
             <BitSize>10432</BitSize>
             <BaseType Namespace="Tc2_SerialCom">SerialLineControl</BaseType>
-            <BitOffs>640878176</BitOffs>
+            <BitOffs>640878624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM_Buffers.Serial_RXBuffer_M1K3</Name>
@@ -41228,7 +41346,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640889120</BitOffs>
+            <BitOffs>640889568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM_Buffers.Serial_TXBuffer_M1K3</Name>
@@ -41239,7 +41357,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640891632</BitOffs>
+            <BitOffs>640892080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM_Buffers.Serial_RXBuffer_M2K3</Name>
@@ -41251,7 +41369,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640894144</BitOffs>
+            <BitOffs>640894592</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM_Buffers.Serial_TXBuffer_M2K3</Name>
@@ -41262,7 +41380,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640896656</BitOffs>
+            <BitOffs>640897104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -41276,7 +41394,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640907744</BitOffs>
+            <BitOffs>640908192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_SerialIO</Name>
@@ -41290,7 +41408,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640909792</BitOffs>
+            <BitOffs>640910240</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_SerialIO</Name>
@@ -41304,7 +41422,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640912896</BitOffs>
+            <BitOffs>640913344</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__SerialIO</Name>
@@ -41325,7 +41443,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640913056</BitOffs>
+            <BitOffs>640913504</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -41812,7 +41930,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640899200</BitOffs>
+            <BitOffs>640899648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K3.M2K3_Pitch</Name>
@@ -41846,7 +41964,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640901952</BitOffs>
+            <BitOffs>640902400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PiezoDriver</Name>
@@ -41860,7 +41978,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640912928</BitOffs>
+            <BitOffs>640913376</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PiezoDriver</Name>
@@ -41874,7 +41992,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640912960</BitOffs>
+            <BitOffs>640913408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PiezoDriver</Name>
@@ -41895,7 +42013,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640913760</BitOffs>
+            <BitOffs>640914208</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -41926,7 +42044,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634820416</BitOffs>
+            <BitOffs>634820736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.bLimitForwardEnable</Name>
@@ -41939,7 +42057,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634828416</BitOffs>
+            <BitOffs>634828736</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.bLimitBackwardEnable</Name>
@@ -41952,7 +42070,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634828424</BitOffs>
+            <BitOffs>634828744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.bHome</Name>
@@ -41965,7 +42083,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634828432</BitOffs>
+            <BitOffs>634828752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.bHardwareEnable</Name>
@@ -41988,7 +42106,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634828448</BitOffs>
+            <BitOffs>634828768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.nRawEncoderULINT</Name>
@@ -42001,7 +42119,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634828480</BitOffs>
+            <BitOffs>634828800</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.nRawEncoderUINT</Name>
@@ -42014,7 +42132,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634828544</BitOffs>
+            <BitOffs>634828864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.nRawEncoderINT</Name>
@@ -42027,7 +42145,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634828560</BitOffs>
+            <BitOffs>634828880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m1.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -42039,7 +42157,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>634847104</BitOffs>
+            <BitOffs>634847424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.Axis.NcToPlc</Name>
@@ -42051,7 +42169,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635145088</BitOffs>
+            <BitOffs>635145408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.bLimitForwardEnable</Name>
@@ -42064,7 +42182,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635153088</BitOffs>
+            <BitOffs>635153408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.bLimitBackwardEnable</Name>
@@ -42077,7 +42195,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635153096</BitOffs>
+            <BitOffs>635153416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.bHome</Name>
@@ -42090,7 +42208,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635153104</BitOffs>
+            <BitOffs>635153424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.bHardwareEnable</Name>
@@ -42113,7 +42231,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635153120</BitOffs>
+            <BitOffs>635153440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.nRawEncoderULINT</Name>
@@ -42126,7 +42244,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635153152</BitOffs>
+            <BitOffs>635153472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.nRawEncoderUINT</Name>
@@ -42139,7 +42257,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635153216</BitOffs>
+            <BitOffs>635153536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.nRawEncoderINT</Name>
@@ -42152,7 +42270,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635153232</BitOffs>
+            <BitOffs>635153552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m2.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -42164,7 +42282,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635171776</BitOffs>
+            <BitOffs>635172096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.Axis.NcToPlc</Name>
@@ -42176,7 +42294,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635469760</BitOffs>
+            <BitOffs>635470080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.bLimitForwardEnable</Name>
@@ -42189,7 +42307,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635477760</BitOffs>
+            <BitOffs>635478080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.bLimitBackwardEnable</Name>
@@ -42202,7 +42320,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635477768</BitOffs>
+            <BitOffs>635478088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.bHome</Name>
@@ -42215,7 +42333,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635477776</BitOffs>
+            <BitOffs>635478096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.bHardwareEnable</Name>
@@ -42238,7 +42356,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635477792</BitOffs>
+            <BitOffs>635478112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.nRawEncoderULINT</Name>
@@ -42251,7 +42369,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635477824</BitOffs>
+            <BitOffs>635478144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.nRawEncoderUINT</Name>
@@ -42264,7 +42382,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635477888</BitOffs>
+            <BitOffs>635478208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.nRawEncoderINT</Name>
@@ -42277,7 +42395,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635477904</BitOffs>
+            <BitOffs>635478224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m3.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -42289,7 +42407,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635496448</BitOffs>
+            <BitOffs>635496768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.Axis.NcToPlc</Name>
@@ -42301,7 +42419,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635794432</BitOffs>
+            <BitOffs>635794752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.bLimitForwardEnable</Name>
@@ -42314,7 +42432,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635802432</BitOffs>
+            <BitOffs>635802752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.bLimitBackwardEnable</Name>
@@ -42327,7 +42445,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635802440</BitOffs>
+            <BitOffs>635802760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.bHome</Name>
@@ -42340,7 +42458,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635802448</BitOffs>
+            <BitOffs>635802768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.bHardwareEnable</Name>
@@ -42363,7 +42481,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635802464</BitOffs>
+            <BitOffs>635802784</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.nRawEncoderULINT</Name>
@@ -42376,7 +42494,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635802496</BitOffs>
+            <BitOffs>635802816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.nRawEncoderUINT</Name>
@@ -42389,7 +42507,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635802560</BitOffs>
+            <BitOffs>635802880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.nRawEncoderINT</Name>
@@ -42402,7 +42520,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635802576</BitOffs>
+            <BitOffs>635802896</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m4.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -42414,7 +42532,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>635821120</BitOffs>
+            <BitOffs>635821440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.Axis.NcToPlc</Name>
@@ -42426,7 +42544,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636119104</BitOffs>
+            <BitOffs>636119424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.bLimitForwardEnable</Name>
@@ -42439,7 +42557,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636127104</BitOffs>
+            <BitOffs>636127424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.bLimitBackwardEnable</Name>
@@ -42452,7 +42570,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636127112</BitOffs>
+            <BitOffs>636127432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.bHome</Name>
@@ -42465,7 +42583,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636127120</BitOffs>
+            <BitOffs>636127440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.bHardwareEnable</Name>
@@ -42488,7 +42606,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636127136</BitOffs>
+            <BitOffs>636127456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.nRawEncoderULINT</Name>
@@ -42501,7 +42619,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636127168</BitOffs>
+            <BitOffs>636127488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.nRawEncoderUINT</Name>
@@ -42514,7 +42632,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636127232</BitOffs>
+            <BitOffs>636127552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.nRawEncoderINT</Name>
@@ -42527,7 +42645,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636127248</BitOffs>
+            <BitOffs>636127568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.bSTOEnable1</Name>
@@ -42540,7 +42658,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636144224</BitOffs>
+            <BitOffs>636144544</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.bSTOEnable2</Name>
@@ -42552,7 +42670,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636144232</BitOffs>
+            <BitOffs>636144552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.stYupEnc</Name>
@@ -42565,7 +42683,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636144256</BitOffs>
+            <BitOffs>636144576</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.stYdwnEnc</Name>
@@ -42577,7 +42695,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636144384</BitOffs>
+            <BitOffs>636144704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.stXupEnc</Name>
@@ -42589,7 +42707,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636144512</BitOffs>
+            <BitOffs>636144832</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.stXdwnEnc</Name>
@@ -42601,7 +42719,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636144640</BitOffs>
+            <BitOffs>636144960</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.PEnc.Count</Name>
@@ -42614,7 +42732,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636145216</BitOffs>
+            <BitOffs>636145536</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.SEnc.Count</Name>
@@ -42627,7 +42745,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636145344</BitOffs>
+            <BitOffs>636145664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.PEnc.Count</Name>
@@ -42640,7 +42758,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636154688</BitOffs>
+            <BitOffs>636155008</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.SEnc.Count</Name>
@@ -42653,7 +42771,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>636154816</BitOffs>
+            <BitOffs>636155136</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbM1K3PitchControl.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -42665,7 +42783,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637388800</BitOffs>
+            <BitOffs>637389120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.Axis.NcToPlc</Name>
@@ -42677,7 +42795,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637693312</BitOffs>
+            <BitOffs>637693632</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.bLimitForwardEnable</Name>
@@ -42690,7 +42808,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637701312</BitOffs>
+            <BitOffs>637701632</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.bLimitBackwardEnable</Name>
@@ -42703,7 +42821,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637701320</BitOffs>
+            <BitOffs>637701640</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.bHome</Name>
@@ -42716,7 +42834,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637701328</BitOffs>
+            <BitOffs>637701648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.bHardwareEnable</Name>
@@ -42739,7 +42857,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637701344</BitOffs>
+            <BitOffs>637701664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.nRawEncoderULINT</Name>
@@ -42752,7 +42870,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637701376</BitOffs>
+            <BitOffs>637701696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.nRawEncoderUINT</Name>
@@ -42765,7 +42883,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637701440</BitOffs>
+            <BitOffs>637701760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.nRawEncoderINT</Name>
@@ -42778,7 +42896,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637701456</BitOffs>
+            <BitOffs>637701776</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m6.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -42790,7 +42908,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>637720000</BitOffs>
+            <BitOffs>637720320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.Axis.NcToPlc</Name>
@@ -42802,7 +42920,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638017984</BitOffs>
+            <BitOffs>638018304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.bLimitForwardEnable</Name>
@@ -42815,7 +42933,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638025984</BitOffs>
+            <BitOffs>638026304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.bLimitBackwardEnable</Name>
@@ -42828,7 +42946,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638025992</BitOffs>
+            <BitOffs>638026312</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.bHome</Name>
@@ -42841,7 +42959,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638026000</BitOffs>
+            <BitOffs>638026320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.bHardwareEnable</Name>
@@ -42864,7 +42982,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638026016</BitOffs>
+            <BitOffs>638026336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.nRawEncoderULINT</Name>
@@ -42877,7 +42995,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638026048</BitOffs>
+            <BitOffs>638026368</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.nRawEncoderUINT</Name>
@@ -42890,7 +43008,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638026112</BitOffs>
+            <BitOffs>638026432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.nRawEncoderINT</Name>
@@ -42903,7 +43021,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638026128</BitOffs>
+            <BitOffs>638026448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m7.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -42915,7 +43033,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638044672</BitOffs>
+            <BitOffs>638044992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.Axis.NcToPlc</Name>
@@ -42927,7 +43045,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638342656</BitOffs>
+            <BitOffs>638342976</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.bLimitForwardEnable</Name>
@@ -42940,7 +43058,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638350656</BitOffs>
+            <BitOffs>638350976</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.bLimitBackwardEnable</Name>
@@ -42953,7 +43071,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638350664</BitOffs>
+            <BitOffs>638350984</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.bHome</Name>
@@ -42966,7 +43084,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638350672</BitOffs>
+            <BitOffs>638350992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.bHardwareEnable</Name>
@@ -42989,7 +43107,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638350688</BitOffs>
+            <BitOffs>638351008</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.nRawEncoderULINT</Name>
@@ -43002,7 +43120,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638350720</BitOffs>
+            <BitOffs>638351040</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.nRawEncoderUINT</Name>
@@ -43015,7 +43133,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638350784</BitOffs>
+            <BitOffs>638351104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.nRawEncoderINT</Name>
@@ -43028,7 +43146,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638350800</BitOffs>
+            <BitOffs>638351120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m8.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -43040,7 +43158,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638369344</BitOffs>
+            <BitOffs>638369664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.Axis.NcToPlc</Name>
@@ -43052,7 +43170,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638667328</BitOffs>
+            <BitOffs>638667648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.bLimitForwardEnable</Name>
@@ -43065,7 +43183,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638675328</BitOffs>
+            <BitOffs>638675648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.bLimitBackwardEnable</Name>
@@ -43078,7 +43196,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638675336</BitOffs>
+            <BitOffs>638675656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.bHome</Name>
@@ -43091,7 +43209,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638675344</BitOffs>
+            <BitOffs>638675664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.bHardwareEnable</Name>
@@ -43114,7 +43232,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638675360</BitOffs>
+            <BitOffs>638675680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.nRawEncoderULINT</Name>
@@ -43127,7 +43245,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638675392</BitOffs>
+            <BitOffs>638675712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.nRawEncoderUINT</Name>
@@ -43140,7 +43258,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638675456</BitOffs>
+            <BitOffs>638675776</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.nRawEncoderINT</Name>
@@ -43153,7 +43271,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638675472</BitOffs>
+            <BitOffs>638675792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m9.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -43165,7 +43283,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638694016</BitOffs>
+            <BitOffs>638694336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.Axis.NcToPlc</Name>
@@ -43177,7 +43295,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>638992000</BitOffs>
+            <BitOffs>638992320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.bLimitForwardEnable</Name>
@@ -43190,7 +43308,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639000000</BitOffs>
+            <BitOffs>639000320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.bLimitBackwardEnable</Name>
@@ -43203,7 +43321,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639000008</BitOffs>
+            <BitOffs>639000328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.bHome</Name>
@@ -43216,7 +43334,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639000016</BitOffs>
+            <BitOffs>639000336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.bHardwareEnable</Name>
@@ -43239,7 +43357,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639000032</BitOffs>
+            <BitOffs>639000352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.nRawEncoderULINT</Name>
@@ -43252,7 +43370,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639000064</BitOffs>
+            <BitOffs>639000384</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.nRawEncoderUINT</Name>
@@ -43265,7 +43383,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639000128</BitOffs>
+            <BitOffs>639000448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.nRawEncoderINT</Name>
@@ -43278,7 +43396,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639000144</BitOffs>
+            <BitOffs>639000464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.bSTOEnable1</Name>
@@ -43291,7 +43409,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639017120</BitOffs>
+            <BitOffs>639017440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.bSTOEnable2</Name>
@@ -43303,7 +43421,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639017128</BitOffs>
+            <BitOffs>639017448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.stYupEnc</Name>
@@ -43316,7 +43434,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639017152</BitOffs>
+            <BitOffs>639017472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.stYdwnEnc</Name>
@@ -43328,7 +43446,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639017280</BitOffs>
+            <BitOffs>639017600</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.stXupEnc</Name>
@@ -43340,7 +43458,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639017408</BitOffs>
+            <BitOffs>639017728</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.stXdwnEnc</Name>
@@ -43352,7 +43470,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639017536</BitOffs>
+            <BitOffs>639017856</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.PEnc.Count</Name>
@@ -43365,7 +43483,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639018112</BitOffs>
+            <BitOffs>639018432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.fbAutoCoupleY.gantry_diff_limit.SEnc.Count</Name>
@@ -43378,7 +43496,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639018240</BitOffs>
+            <BitOffs>639018560</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.PEnc.Count</Name>
@@ -43391,7 +43509,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639027584</BitOffs>
+            <BitOffs>639027904</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3.fbRunHOMS.fbAutoCoupleX.gantry_diff_limit.SEnc.Count</Name>
@@ -43404,7 +43522,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>639027712</BitOffs>
+            <BitOffs>639028032</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbM2K3PitchControl.fbMotionStage.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -43416,7 +43534,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640261696</BitOffs>
+            <BitOffs>640262016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m10.fbDriveVirtual.MasterAxis.NcToPlc</Name>
@@ -43428,23 +43546,10 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640567616</BitOffs>
+            <BitOffs>640567936</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR1K3_Flow_1.iRaw</Name>
-            <Comment> Connect this input to the terminal</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640864544</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR1K3_Flow_2.iRaw</Name>
+            <Name>MAIN.fbCoolingPanelMR1K3.fbFlow_1.iRaw</Name>
             <Comment> Connect this input to the terminal</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -43457,7 +43562,7 @@ Use this thing to have a simple indexer with rollover.
             <BitOffs>640865056</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR1K3_Press_1.iRaw</Name>
+            <Name>MAIN.fbCoolingPanelMR1K3.fbPress_1.iRaw</Name>
             <Comment> Connect this input to the terminal</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -43467,10 +43572,10 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640865568</BitOffs>
+            <BitOffs>640865504</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR2K3_Flow_1.iRaw</Name>
+            <Name>MAIN.fbCoolingPanelMR1K3.fbFlow_2.iRaw</Name>
             <Comment> Connect this input to the terminal</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -43480,10 +43585,10 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640866080</BitOffs>
+            <BitOffs>640866016</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR2K3_Flow_2.iRaw</Name>
+            <Name>MAIN.fbCoolingPanelMR2K3.fbFlow_1.iRaw</Name>
             <Comment> Connect this input to the terminal</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -43493,10 +43598,10 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640866592</BitOffs>
+            <BitOffs>640866656</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR2K3_Press_1.iRaw</Name>
+            <Name>MAIN.fbCoolingPanelMR2K3.fbPress_1.iRaw</Name>
             <Comment> Connect this input to the terminal</Comment>
             <BitSize>16</BitSize>
             <BaseType>INT</BaseType>
@@ -43509,6 +43614,19 @@ Use this thing to have a simple indexer with rollover.
             <BitOffs>640867104</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>MAIN.fbCoolingPanelMR2K3.fbFlow_2.iRaw</Name>
+            <Comment> Connect this input to the terminal</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>640867616</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>GVL_M1K3.M1K3_Pitch.diEncCnt</Name>
             <Comment>Raw encoder count</Comment>
             <BitSize>64</BitSize>
@@ -43519,7 +43637,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640901632</BitOffs>
+            <BitOffs>640902080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K3.M2K3_Pitch.diEncCnt</Name>
@@ -43532,7 +43650,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>640904384</BitOffs>
+            <BitOffs>640904832</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -43540,6 +43658,56 @@ Use this thing to have a simple indexer with rollover.
           <Name>PlcTask Outputs</Name>
           <ContextId>2</ContextId>
           <ByteSize>80805888</ByteSize>
+          <Symbol>
+            <Name>MAIN.bActivateVarCoolMR1K3</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[EL2004_M1K3_VCV]^Channel 1^Output</Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR1K3:SOMS:VCV
+        io: io
+        field: ZNAM OFF
+        field: ONAM ON
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634543480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>MAIN.bActivateVarCoolMR2K3</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[EL2004_M2K3_VCV]^Channel 1^Output</Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MR2K3:SOMS:VCV
+        io: io
+        field: ZNAM OFF
+        field: ONAM ON
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>634819632</BitOffs>
+          </Symbol>
           <Symbol>
             <Name>MAIN.M1.Axis.PlcToNc</Name>
             <BitSize>1024</BitSize>
@@ -43550,7 +43718,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634819392</BitOffs>
+            <BitOffs>634819712</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1.bBrakeRelease</Name>
@@ -43563,7 +43731,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634828440</BitOffs>
+            <BitOffs>634828760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m1.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43575,7 +43743,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>634846080</BitOffs>
+            <BitOffs>634846400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.Axis.PlcToNc</Name>
@@ -43587,7 +43755,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635144064</BitOffs>
+            <BitOffs>635144384</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2.bBrakeRelease</Name>
@@ -43600,7 +43768,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635153112</BitOffs>
+            <BitOffs>635153432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m2.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43612,7 +43780,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635170752</BitOffs>
+            <BitOffs>635171072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.Axis.PlcToNc</Name>
@@ -43624,7 +43792,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635468736</BitOffs>
+            <BitOffs>635469056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3.bBrakeRelease</Name>
@@ -43637,7 +43805,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635477784</BitOffs>
+            <BitOffs>635478104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m3.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43649,7 +43817,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635495424</BitOffs>
+            <BitOffs>635495744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.Axis.PlcToNc</Name>
@@ -43661,7 +43829,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635793408</BitOffs>
+            <BitOffs>635793728</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4.bBrakeRelease</Name>
@@ -43674,7 +43842,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635802456</BitOffs>
+            <BitOffs>635802776</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m4.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43686,7 +43854,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>635820096</BitOffs>
+            <BitOffs>635820416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.Axis.PlcToNc</Name>
@@ -43698,7 +43866,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636118080</BitOffs>
+            <BitOffs>636118400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5.bBrakeRelease</Name>
@@ -43711,7 +43879,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>636127128</BitOffs>
+            <BitOffs>636127448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbM1K3PitchControl.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43723,7 +43891,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637387776</BitOffs>
+            <BitOffs>637388096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.Axis.PlcToNc</Name>
@@ -43735,7 +43903,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637692288</BitOffs>
+            <BitOffs>637692608</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6.bBrakeRelease</Name>
@@ -43748,7 +43916,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637701336</BitOffs>
+            <BitOffs>637701656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m6.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43760,7 +43928,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>637718976</BitOffs>
+            <BitOffs>637719296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.Axis.PlcToNc</Name>
@@ -43772,7 +43940,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638016960</BitOffs>
+            <BitOffs>638017280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7.bBrakeRelease</Name>
@@ -43785,7 +43953,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638026008</BitOffs>
+            <BitOffs>638026328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m7.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43797,7 +43965,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638043648</BitOffs>
+            <BitOffs>638043968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.Axis.PlcToNc</Name>
@@ -43809,7 +43977,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638341632</BitOffs>
+            <BitOffs>638341952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8.bBrakeRelease</Name>
@@ -43822,7 +43990,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638350680</BitOffs>
+            <BitOffs>638351000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m8.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43834,7 +44002,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638368320</BitOffs>
+            <BitOffs>638368640</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.Axis.PlcToNc</Name>
@@ -43846,7 +44014,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638666304</BitOffs>
+            <BitOffs>638666624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9.bBrakeRelease</Name>
@@ -43859,7 +44027,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638675352</BitOffs>
+            <BitOffs>638675672</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m9.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43871,7 +44039,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638692992</BitOffs>
+            <BitOffs>638693312</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.Axis.PlcToNc</Name>
@@ -43883,7 +44051,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>638990976</BitOffs>
+            <BitOffs>638991296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10.bBrakeRelease</Name>
@@ -43896,7 +44064,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>639000024</BitOffs>
+            <BitOffs>639000344</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbM2K3PitchControl.fbMotionStage.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43908,7 +44076,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>640260672</BitOffs>
+            <BitOffs>640260992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m10.fbDriveVirtual.MasterAxis.PlcToNc</Name>
@@ -43920,7 +44088,7 @@ Use this thing to have a simple indexer with rollover.
                 <Value>Output</Value>
               </Property>
             </Properties>
-            <BitOffs>640566592</BitOffs>
+            <BitOffs>640566912</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -49822,12 +49990,6 @@ Use this thing to have a simple indexer with rollover.
             <BitOffs>634543472</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.bM2K3PitchDone</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <BitOffs>634543480</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>GVL_Constants.nGANTRY_TOLERANCE_NM_DEFAULT</Name>
             <Comment> default gantry tolerance in encoder counts = nm</Comment>
             <BitSize>64</BitSize>
@@ -49912,11 +50074,11 @@ Use this thing to have a simple indexer with rollover.
               </SubItem>
               <SubItem>
                 <Name>.iMinor</Name>
-                <Value>6</Value>
+                <Value>7</Value>
               </SubItem>
               <SubItem>
                 <Name>.iBuild</Name>
-                <Value>1</Value>
+                <Value>0</Value>
               </SubItem>
               <SubItem>
                 <Name>.iRevision</Name>
@@ -49928,7 +50090,7 @@ Use this thing to have a simple indexer with rollover.
               </SubItem>
               <SubItem>
                 <Name>.sVersion</Name>
-                <String>0.6.1</String>
+                <String>0.7.0</String>
               </SubItem>
             </Default>
             <Properties>
@@ -50031,40 +50193,16 @@ Use this thing to have a simple indexer with rollover.
             <BitOffs>634809696</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>MAIN.bM2K3PitchDone</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <BitOffs>634819616</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>MAIN.bM2K3PitchBusy</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
-            <BitOffs>634819296</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bLittleEndian</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>true</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>634819312</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bSimulationMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Bool>false</Bool>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>634819320</BitOffs>
+            <BitOffs>634819624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1</Name>
@@ -50094,13 +50232,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>634819328</BitOffs>
+            <BitOffs>634819648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m1</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>634844608</BitOffs>
+            <BitOffs>634844928</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2</Name>
@@ -50130,13 +50268,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>635144000</BitOffs>
+            <BitOffs>635144320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m2</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>635169280</BitOffs>
+            <BitOffs>635169600</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M3</Name>
@@ -50166,13 +50304,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>635468672</BitOffs>
+            <BitOffs>635468992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m3</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>635493952</BitOffs>
+            <BitOffs>635494272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M4</Name>
@@ -50202,13 +50340,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>635793344</BitOffs>
+            <BitOffs>635793664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m4</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>635818624</BitOffs>
+            <BitOffs>635818944</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M5</Name>
@@ -50234,7 +50372,7 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>636118016</BitOffs>
+            <BitOffs>636118336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M1K3</Name>
@@ -50257,7 +50395,7 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>636143296</BitOffs>
+            <BitOffs>636143616</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbYRMSErrorM1K3</Name>
@@ -50272,19 +50410,19 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>636163968</BitOffs>
+            <BitOffs>636164288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMaxYRMSErrorM1K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>636550976</BitOffs>
+            <BitOffs>636551296</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMinYRMSErrorM1K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>636551040</BitOffs>
+            <BitOffs>636551360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbXRMSErrorM1K3</Name>
@@ -50298,19 +50436,19 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>636551104</BitOffs>
+            <BitOffs>636551424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMaxXRMSErrorM1K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>636938112</BitOffs>
+            <BitOffs>636938432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMinXRMSErrorM1K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>636938176</BitOffs>
+            <BitOffs>636938496</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbPitchRMSErrorM1K3</Name>
@@ -50324,26 +50462,26 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>636938240</BitOffs>
+            <BitOffs>636938560</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMaxPitchRMSErrorM1K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>637325248</BitOffs>
+            <BitOffs>637325568</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMinPitchRMSErrorM1K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>637325312</BitOffs>
+            <BitOffs>637325632</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbM1K3PitchControl</Name>
             <Comment> Pitch Control</Comment>
             <BitSize>366848</BitSize>
             <BaseType Namespace="lcls_twincat_optics">FB_PitchControl</BaseType>
-            <BitOffs>637325376</BitOffs>
+            <BitOffs>637325696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M6</Name>
@@ -50373,13 +50511,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>637692224</BitOffs>
+            <BitOffs>637692544</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m6</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>637717504</BitOffs>
+            <BitOffs>637717824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M7</Name>
@@ -50409,13 +50547,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>638016896</BitOffs>
+            <BitOffs>638017216</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m7</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>638042176</BitOffs>
+            <BitOffs>638042496</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M8</Name>
@@ -50445,13 +50583,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>638341568</BitOffs>
+            <BitOffs>638341888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m8</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>638366848</BitOffs>
+            <BitOffs>638367168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M9</Name>
@@ -50481,13 +50619,13 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>638666240</BitOffs>
+            <BitOffs>638666560</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m9</Name>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>638691520</BitOffs>
+            <BitOffs>638691840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M10</Name>
@@ -50517,7 +50655,7 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>638990912</BitOffs>
+            <BitOffs>638991232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.M2K3</Name>
@@ -50540,7 +50678,7 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>639016192</BitOffs>
+            <BitOffs>639016512</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbYRMSErrorM2K3</Name>
@@ -50555,19 +50693,19 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>639036864</BitOffs>
+            <BitOffs>639037184</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMaxYRMSErrorM2K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>639423872</BitOffs>
+            <BitOffs>639424192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMinYRMSErrorM2K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>639423936</BitOffs>
+            <BitOffs>639424256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbXRMSErrorM2K3</Name>
@@ -50581,19 +50719,19 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>639424000</BitOffs>
+            <BitOffs>639424320</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMaxXRMSErrorM2K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>639811008</BitOffs>
+            <BitOffs>639811328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMinXRMSErrorM2K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>639811072</BitOffs>
+            <BitOffs>639811392</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbPitchRMSErrorM2K3</Name>
@@ -50607,203 +50745,107 @@ Use this thing to have a simple indexer with rollover.
     </Value>
               </Property>
             </Properties>
-            <BitOffs>639811136</BitOffs>
+            <BitOffs>639811456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMaxPitchRMSErrorM2K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>640198144</BitOffs>
+            <BitOffs>640198464</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fMinPitchRMSErrorM2K3</Name>
             <BitSize>64</BitSize>
             <BaseType>LREAL</BaseType>
-            <BitOffs>640198208</BitOffs>
+            <BitOffs>640198528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbM2K3PitchControl</Name>
             <Comment> Pitch Control</Comment>
             <BitSize>366848</BitSize>
             <BaseType Namespace="lcls_twincat_optics">FB_PitchControl</BaseType>
-            <BitOffs>640198272</BitOffs>
+            <BitOffs>640198592</BitOffs>
           </Symbol>
           <Symbol>
             <Name>MAIN.fbMotionStage_m10</Name>
             <Comment> Lost serial comm to E621 controller, unsure why...</Comment>
             <BitSize>299392</BitSize>
             <BaseType Namespace="lcls_twincat_motion">FB_MotionStage</BaseType>
-            <BitOffs>640565120</BitOffs>
+            <BitOffs>640565440</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR1K3_Flow_1</Name>
+            <Name>MAIN.fbCoolingPanelMR1K3</Name>
             <Comment> MR1K3 Flow Press Sensors</Comment>
-            <BitSize>448</BitSize>
-            <BaseType Namespace="LCLS_General">FB_AnalogInput</BaseType>
+            <BitSize>1600</BitSize>
+            <BaseType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_2f1p</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 1^Value</Value>
+                <Value>.fbFlow_1.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 1^Value;
+                                 .fbFlow_2.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 2^Value;
+                              .fbPress_1.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 3^Value
+    </Value>
               </Property>
-            </Properties>
-            <BitOffs>640864512</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR1K3_Flow_1_val</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
-            <Properties>
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-        pv: MR1K3:SOMS:FWM:1
-        field: EGU lpm
-        io: i
+        pv: MR1K3:SOMS
     </Value>
               </Property>
             </Properties>
-            <BitOffs>640864960</BitOffs>
+            <BitOffs>640864832</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR1K3_Flow_2</Name>
-            <BitSize>448</BitSize>
-            <BaseType Namespace="LCLS_General">FB_AnalogInput</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 2^Value</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640865024</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR1K3_Flow_2_val</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MR1K3:SOMS:FWM:2
-        field: EGU lpm
-        io: i
-    </Value>
-              </Property>
-            </Properties>
-            <BitOffs>640865472</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR1K3_Press_1</Name>
-            <BitSize>448</BitSize>
-            <BaseType Namespace="LCLS_General">FB_AnalogInput</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 3^Value</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640865536</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR1K3_Press_1_val</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MR1K3:SOMS:PRSM:1
-        field: EGU bar
-        io: i
-    </Value>
-              </Property>
-            </Properties>
-            <BitOffs>640865984</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR2K3_Flow_1</Name>
+            <Name>MAIN.fbCoolingPanelMR2K3</Name>
             <Comment> MR2K3 Flow Press Sensors</Comment>
-            <BitSize>448</BitSize>
-            <BaseType Namespace="LCLS_General">FB_AnalogInput</BaseType>
+            <BitSize>1600</BitSize>
+            <BaseType Namespace="lcls_twincat_optics">FB_Axilon_Cooling_2f1p</BaseType>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 1^Value</Value>
+                <Value>.fbFlow_1.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 1^Value;
+                                 .fbFlow_2.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 2^Value;
+                              .fbPress_1.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 3^Value
+    </Value>
               </Property>
-            </Properties>
-            <BitOffs>640866048</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR2K3_Flow_1_val</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
-            <Properties>
               <Property>
                 <Name>pytmc</Name>
                 <Value>
-        pv: MR2K3:SOMS:FWM:1
-        field: EGU lpm
-        io: i
+        pv: MR2K3:SOMS
     </Value>
               </Property>
             </Properties>
-            <BitOffs>640866496</BitOffs>
+            <BitOffs>640866432</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR2K3_Flow_2</Name>
-            <BitSize>448</BitSize>
-            <BaseType Namespace="LCLS_General">FB_AnalogInput</BaseType>
+            <Name>Constants.bLittleEndian</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>true</Bool>
+            </Default>
             <Properties>
               <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 2^Value</Value>
+                <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640866560</BitOffs>
+            <BitOffs>640899616</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>MAIN.fMR2K3_Flow_2_val</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
+            <Name>Constants.bSimulationMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Bool>false</Bool>
+            </Default>
             <Properties>
               <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MR2K3:SOMS:FWM:2
-        field: EGU lpm
-        io: i
-    </Value>
+                <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640867008</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR2K3_Press_1</Name>
-            <BitSize>448</BitSize>
-            <BaseType Namespace="LCLS_General">FB_AnalogInput</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 3^Value</Value>
-              </Property>
-            </Properties>
-            <BitOffs>640867072</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>MAIN.fMR2K3_Press_1_val</Name>
-            <BitSize>64</BitSize>
-            <BaseType>LREAL</BaseType>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MR2K3:SOMS:PRSM:1
-        field: EGU bar
-        io: i
-    </Value>
-              </Property>
-            </Properties>
-            <BitOffs>640867520</BitOffs>
+            <BitOffs>640899624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.nRegisterSize</Name>
@@ -50818,22 +50860,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640899168</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nPackMode</Name>
-            <Comment> Does the target support multiple cores?</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Default>
-              <Value>8</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>640899184</BitOffs>
+            <BitOffs>640899632</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K3_Constants.nYUP_ENC_REF</Name>
@@ -50849,7 +50876,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640901696</BitOffs>
+            <BitOffs>640902144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K3_Constants.nYDWN_ENC_REF</Name>
@@ -50863,7 +50890,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640901760</BitOffs>
+            <BitOffs>640902208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K3_Constants.nXUP_ENC_REF</Name>
@@ -50877,7 +50904,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640901824</BitOffs>
+            <BitOffs>640902272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M1K3_Constants.nXDWN_ENC_REF</Name>
@@ -50891,7 +50918,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640901888</BitOffs>
+            <BitOffs>640902336</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K3_Constants.nYUP_ENC_REF</Name>
@@ -50907,7 +50934,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640904448</BitOffs>
+            <BitOffs>640904896</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K3_Constants.nYDWN_ENC_REF</Name>
@@ -50921,7 +50948,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640904512</BitOffs>
+            <BitOffs>640904960</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K3_Constants.nXUP_ENC_REF</Name>
@@ -50935,7 +50962,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640904576</BitOffs>
+            <BitOffs>640905024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_M2K3_Constants.nXDWN_ENC_REF</Name>
@@ -50949,7 +50976,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640904640</BitOffs>
+            <BitOffs>640905088</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -50979,7 +51006,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905472</BitOffs>
+            <BitOffs>640905920</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -51009,7 +51036,22 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905536</BitOffs>
+            <BitOffs>640905984</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nPackMode</Name>
+            <Comment> Does the target support multiple cores?</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>8</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>640906048</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bFPUSupport</Name>
@@ -51024,7 +51066,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905600</BitOffs>
+            <BitOffs>640906064</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bMulticoreSupport</Name>
@@ -51038,7 +51080,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905608</BitOffs>
+            <BitOffs>640906072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -51053,7 +51095,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905632</BitOffs>
+            <BitOffs>640906080</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersionNumeric</Name>
@@ -51068,7 +51110,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905664</BitOffs>
+            <BitOffs>640906112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_LicenseInfoVarList._LicenseInfo</Name>
@@ -51189,7 +51231,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640905696</BitOffs>
+            <BitOffs>640906144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskInfo</Name>
@@ -51207,7 +51249,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640909824</BitOffs>
+            <BitOffs>640910272</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskPouOid_PlcTask</Name>
@@ -51221,7 +51263,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640912992</BitOffs>
+            <BitOffs>640913440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._TaskOid_PlcTask</Name>
@@ -51235,7 +51277,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640913024</BitOffs>
+            <BitOffs>640913472</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList.__PlcTask</Name>
@@ -51256,7 +51298,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640914464</BitOffs>
+            <BitOffs>640914912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
@@ -51282,7 +51324,7 @@ Use this thing to have a simple indexer with rollover.
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>640965984</BitOffs>
+            <BitOffs>640966432</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -51354,7 +51396,7 @@ Use this thing to have a simple indexer with rollover.
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-01-31T14:25:48</Value>
+          <Value>2024-03-15T14:37:00</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>

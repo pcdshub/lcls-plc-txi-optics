@@ -1072,7 +1072,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{6F8D8EEF-45CD-488B-9616-A25D9A723693}" Name="txi_optics" PrjFilePath="..\..\txi_optics\txi_optics.plcproj" TmcFilePath="..\..\txi_optics\txi_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_optics\txi_optics.tmc" TmcHash="{527D3EC5-EFCE-89C4-7DDB-AE1D89F0A176}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_optics\txi_optics.tmc" TmcHash="{33E4FB78-763E-12F5-35C7-8A60FF4A9712}">
 			<Name>txi_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -1634,32 +1634,32 @@ External Setpoint Generation:
 					<Type GUID="{25521FAA-EA5F-4C7F-8864-BBCCDACD2E98}" Namespace="MC">NCTOPLC_AXIS_REF</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.fMR1K3_Flow_1.iRaw</Name>
+					<Name>MAIN.fbCoolingPanelMR1K3.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.fMR1K3_Flow_2.iRaw</Name>
+					<Name>MAIN.fbCoolingPanelMR1K3.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.fMR1K3_Press_1.iRaw</Name>
+					<Name>MAIN.fbCoolingPanelMR1K3.fbFlow_2.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.fMR2K3_Flow_1.iRaw</Name>
+					<Name>MAIN.fbCoolingPanelMR2K3.fbFlow_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.fMR2K3_Flow_2.iRaw</Name>
+					<Name>MAIN.fbCoolingPanelMR2K3.fbPress_1.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>MAIN.fMR2K3_Press_1.iRaw</Name>
+					<Name>MAIN.fbCoolingPanelMR2K3.fbFlow_2.iRaw</Name>
 					<Comment><![CDATA[ Connect this input to the terminal]]></Comment>
 					<Type>INT</Type>
 				</Var>
@@ -1676,6 +1676,14 @@ External Setpoint Generation:
 			</Vars>
 			<Vars VarGrpType="2" ContextId="2" AreaNo="33">
 				<Name>PlcTask Outputs</Name>
+				<Var>
+					<Name>MAIN.bActivateVarCoolMR1K3</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>MAIN.bActivateVarCoolMR2K3</Name>
+					<Type>BOOL</Type>
+				</Var>
 				<Var>
 					<Name>MAIN.M1.Axis.PlcToNc</Name>
 					<Type GUID="{96B75FEB-2D84-43BE-A3EC-D9A681F27D52}" Namespace="MC">PLCTONC_AXIS_REF</Type>
@@ -1873,10 +1881,13 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^MAIN.M1K3.fbRunHOMS.bSTOEnable1" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^MAIN.M1K3.fbRunHOMS.bSTOEnable2" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL2004_M1K3_VCV">
+				<Link VarA="PlcTask Outputs^MAIN.bActivateVarCoolMR1K3" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL3054_M1K3_FWM_PRSM">
-				<Link VarA="PlcTask Inputs^MAIN.fMR1K3_Flow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^MAIN.fMR1K3_Flow_2.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^MAIN.fMR1K3_Press_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbCoolingPanelMR1K3.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbCoolingPanelMR1K3.fbFlow_2.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbCoolingPanelMR1K3.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL5042_M1K3_Pitch">
 				<Link VarA="PlcTask Inputs^GVL_M1K3.M1K3_Pitch.diEncCnt" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
@@ -1961,10 +1972,13 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^MAIN.M2K3.fbRunHOMS.bSTOEnable1" VarB="Channel 1^Input" AutoLink="true" Size="1"/>
 				<Link VarA="PlcTask Inputs^MAIN.M2K3.fbRunHOMS.bSTOEnable2" VarB="Channel 2^Input" AutoLink="true" Size="1"/>
 			</OwnerB>
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M2K3^EL2004_M2K3_VCV">
+				<Link VarA="PlcTask Outputs^MAIN.bActivateVarCoolMR2K3" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
+			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M2K3^EL3054_M2K3_FWM_PRSM">
-				<Link VarA="PlcTask Inputs^MAIN.fMR2K3_Flow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^MAIN.fMR2K3_Flow_2.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^MAIN.fMR2K3_Press_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbCoolingPanelMR2K3.fbFlow_1.iRaw" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbCoolingPanelMR2K3.fbFlow_2.iRaw" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.fbCoolingPanelMR2K3.fbPress_1.iRaw" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M2K3^EL5042_M2K3_Pitch">
 				<Link VarA="PlcTask Inputs^GVL_M2K3.M2K3_Pitch.diEncCnt" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
