@@ -60,6 +60,10 @@
     <Folder Include="POUs" />
   </ItemGroup>
   <ItemGroup>
+    <PlaceholderReference Include="LCLS General">
+      <DefaultResolution>LCLS General, * (SLAC)</DefaultResolution>
+      <Namespace>LCLS_General</Namespace>
+    </PlaceholderReference>
     <PlaceholderReference Include="Tc2_ControllerToolbox">
       <DefaultResolution>Tc2_ControllerToolbox, * (Beckhoff Automation GmbH)</DefaultResolution>
       <Namespace>Tc2_ControllerToolbox</Namespace>
@@ -86,10 +90,10 @@
     </PlaceholderReference>
   </ItemGroup>
   <ItemGroup>
-    <LibraryReference Include="lcls-twincat-motion,2.0.1,SLAC">
+    <LibraryReference Include="lcls-twincat-motion,4.0.5,SLAC">
       <Namespace>lcls_twincat_motion</Namespace>
     </LibraryReference>
-    <LibraryReference Include="lcls-twincat-optics,0.4.1,SLAC">
+    <LibraryReference Include="lcls-twincat-optics,0.7.0,SLAC">
       <Namespace>lcls_twincat_optics</Namespace>
     </LibraryReference>
   </ItemGroup>
@@ -97,6 +101,14 @@
     <None Include="txi_optics.tmc">
       <SubType>Content</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderResolution Include="LCLS General">
+      <Resolution>LCLS General, 2.10.0 (SLAC)</Resolution>
+    </PlaceholderResolution>
+    <PlaceholderResolution Include="lcls-twincat-motion">
+      <Resolution>lcls-twincat-motion, 4.0.5 (SLAC)</Resolution>
+    </PlaceholderResolution>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
