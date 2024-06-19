@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_2_PMPS_POST" Id="{336c6a08-057c-4abe-b1ea-e25741c63140}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_2_PMPS_POST
+VAR
+    fbArbiterIO: FB_SubSysToArbiter_IO;
+    fb_vetoArbiter: FB_VetoArbiter;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[
+GVL_PMPS.fbFastFaultOutput1.Execute();
+
+fbArbiterIO(
+    Arbiter:=GVL_PMPS.fbArbiter1,
+    fbFFHWO:=GVL_PMPS.fbFastFaultOutput1);
+//Arb2 in hutch
+(**fb_vetoArbiter(bVeto:= PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.ST1L1],
+                HigherAuthority := GVL_PMPS.fbArbiter1,
+                LowerAuthority := GVL_PMPS.fbArbiter2,
+                FFO := GVL_PMPS.fbFastFaultOutput1);
+**)
+//ff2_ff1_link_optics(
+    //io_fbFFHWO := GVL_PMPS.fbFastFaultOutput1,
+    //i_xOK :=  GVL_PMPS.fbFastFaultOutput2.q_xFastFaultOut);
+
+//Code for Removing arbitration
+GVL_PMPS.fbArbiter1.AddRequest(nReqID := 49, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'txi-kfe-optics');
+GVL_PMPS.fbArbiter2.AddRequest(nReqID := 50, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'txi-kfe-optics');
+
+//send encoder values for veto]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>

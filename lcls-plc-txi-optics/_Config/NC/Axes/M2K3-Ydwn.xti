@@ -1318,6 +1318,7 @@ External Setpoint Generation:
 	<Axis Id="7" CreateSymbols="true" AxisType="1" AxisFolder="M2K3">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
+			<General UnitName="um"/>
 			<Dynamic Acceleration="5050" Deceleration="5050" Jerk="5100500" DelayTime="0.008"/>
 			<Velo Maximum="100"/>
 			<TargetPosControl Range="0.05" Time="0.01"/>
