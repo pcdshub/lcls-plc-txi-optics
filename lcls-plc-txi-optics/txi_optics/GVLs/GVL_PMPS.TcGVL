@@ -8,7 +8,7 @@ VAR_GLOBAL
     {attribute 'pytmc' := 'pv: PLC:TXI:KFE:OPTICS:ARB:02'}
     fbArbiter2: FB_Arbiter(2);
     {attribute 'pytmc' := 'pv: PLC:TXI:KFE:OPTICS:FFO:01'}
-    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_FFO]^Channel 1^Output'}
+    {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_PRE]^IO Outputs^FFO'}
     fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE , i_sNetID:='172.21.42.126.1.1' );
 END_VAR]]></Declaration>
   </GVL>

@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{6F8D8EEF-45CD-488B-9616-A25D9A723693}" Name="txi_optics" PrjFilePath="..\..\txi_optics\txi_optics.plcproj" TmcFilePath="..\..\txi_optics\txi_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_optics\txi_optics.tmc" TmcHash="{22DF2075-3C7E-62DF-E245-E5441A90D40C}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_optics\txi_optics.tmc" TmcHash="{D205155D-5F21-CE34-8022-FE8F9ECDCFE1}">
 			<Name>txi_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -2198,13 +2198,11 @@ External Setpoint Generation:
 	</Project>
 	<Mappings>
 		<OwnerA Name="txi_optics Instance">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_FFO">
-				<Link VarA="PlcTask Outputs^GVL_PMPS.fbFastFaultOutput1.q_xFastFaultOut" VarB="Channel 1^Output" AutoLink="true" Size="1"/>
-			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^PMPS_PRE">
 				<Link VarA="PlcTask Inputs^PRG_2_PMPS_POST.fbArbiterIO.i_stCurrentBP" VarB="IO Inputs^CurrentBP" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_2_PMPS_POST.fbArbiterIO.xTxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^PRG_2_PMPS_POST.fbArbiterIO.xTxPDO_toggle" VarB="SYNC Inputs^TxPDO toggle" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PMPS.fbFastFaultOutput1.q_xFastFaultOut" VarB="IO Outputs^FFO" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_2_PMPS_POST.fbArbiterIO.q_stRequestedBP" VarB="IO Outputs^RequestedBP" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_MR1K3_SOMS.nMR1K3_Y_ENC_PMPS" VarB="IO Outputs^MR1K3_Y_ENC" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^PRG_MR2K3_SOMS.nMR2K3_Y_ENC_PMPS" VarB="IO Outputs^MR2K3_Y_ENC" AutoLink="true"/>

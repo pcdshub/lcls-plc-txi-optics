@@ -327,6 +327,10 @@
 					<Dictionary>
 						<DataTypes>
 							<DataType>
+								<Name>BOOL</Name>
+								<BitSize>1</BitSize>
+							</DataType>
+							<DataType>
 								<Name>BYTE</Name>
 								<BitSize>8</BitSize>
 							</DataType>
@@ -357,7 +361,7 @@
 							</DataType>
 							<DataType>
 								<Name>DT1A08</Name>
-								<BitSize>336</BitSize>
+								<BitSize>368</BitSize>
 								<SubItem>
 									<SubIdx>0</SubIdx>
 									<Name>SubIndex 000</Name>
@@ -474,6 +478,17 @@
 									<Type>UDINT</Type>
 									<BitSize>32</BitSize>
 									<BitOffs>304</BitOffs>
+									<Flags>
+										<Access WriteRestrictions="PreOP">rw</Access>
+										<Category>o</Category>
+									</Flags>
+								</SubItem>
+								<SubItem>
+									<SubIdx>11</SubIdx>
+									<Name>SubIndex 011</Name>
+									<Type>UDINT</Type>
+									<BitSize>32</BitSize>
+									<BitOffs>336</BitOffs>
 									<Flags>
 										<Access WriteRestrictions="PreOP">rw</Access>
 										<Category>o</Category>
@@ -653,7 +668,7 @@
 							</DataType>
 							<DataType>
 								<Name>DT6000</Name>
-								<BitSize>1904</BitSize>
+								<BitSize>1912</BitSize>
 								<SubItem>
 									<SubIdx>0</SubIdx>
 									<Name>SubIndex 000</Name>
@@ -701,6 +716,18 @@
 										<PdoMapping>R</PdoMapping>
 									</Flags>
 								</SubItem>
+								<SubItem>
+									<SubIdx>4</SubIdx>
+									<Name>FFO</Name>
+									<Type>BOOL</Type>
+									<BitSize>8</BitSize>
+									<BitOffs>1904</BitOffs>
+									<Flags>
+										<Access>rw</Access>
+										<Category>o</Category>
+										<PdoMapping>R</PdoMapping>
+									</Flags>
+								</SubItem>
 							</DataType>
 							<DataType>
 								<Name>DT7000</Name>
@@ -735,12 +762,12 @@
 								<Index>#x1a08</Index>
 								<Name>IO Outputs</Name>
 								<Type>DT1A08</Type>
-								<BitSize>336</BitSize>
+								<BitSize>368</BitSize>
 								<Info>
 									<SubItem>
 										<Name>SubIndex 000</Name>
 										<Info>
-											<DefaultData>0a</DefaultData>
+											<DefaultData>0b</DefaultData>
 										</Info>
 									</SubItem>
 									<SubItem>
@@ -801,6 +828,12 @@
 										<Name>SubIndex 010</Name>
 										<Info>
 											<DefaultData>40030060</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>SubIndex 011</Name>
+										<Info>
+											<DefaultData>08040060</DefaultData>
 										</Info>
 									</SubItem>
 								</Info>
@@ -937,14 +970,14 @@
 								<Index>#x6000</Index>
 								<Name>Outputs</Name>
 								<Type>DT6000</Type>
-								<BitSize>1904</BitSize>
+								<BitSize>1912</BitSize>
 								<Info>
 									<SubItem>
 										<Name>SubIndex 000</Name>
 										<Info>
 											<MinValue>#x0</MinValue>
 											<MaxValue>#xff</MaxValue>
-											<DefaultValue>#x3</DefaultValue>
+											<DefaultValue>#x4</DefaultValue>
 										</Info>
 									</SubItem>
 									<SubItem>
@@ -963,6 +996,12 @@
 										<Name>MR2K3_Y_ENC</Name>
 										<Info>
 											<DefaultData>0000000000000000</DefaultData>
+										</Info>
+									</SubItem>
+									<SubItem>
+										<Name>FFO</Name>
+										<Info>
+											<DefaultData>00</DefaultData>
 										</Info>
 									</SubItem>
 								</Info>
@@ -1003,13 +1042,14 @@
 		<EtherCAT SlaveType="3" AdsServerAddress="ac1558360205eb03" PdiType="#x0008" MboxDataLinkLayer="true" StateMBoxPolling="true" CycleMBoxPollingTime="0" CoeType="47" EoeType="1" FoeType="1" VendorId="#x00000002" ProductCode="#x1a273052" RevisionNo="#x00050000" InfoDataAddr="true" InfoDataNetId="true" TimeoutMailbox2="2000" GenerateOwnNetId="true" CheckRevisionNoType="3" PortPhys="51" DcTimeLoopControlOnly="true" MaxSlotCount="256" MaxSlotGroupCount="1" SlotPdoIncrement="1" SlotIndexIncrement="16" Type="EL6695 EtherCAT Bridge terminal (Primary)" Desc="EL6695">
 			<SyncMan>0010000426000100010000008000da050004001026010000</SyncMan>
 			<SyncMan>0016000422000100020000008000da050004001622010000</SyncMan>
-			<SyncMan>001cec006400010003000000000000000000001c64010000</SyncMan>
+			<SyncMan>001ced006400010003000000000000000000001c64010000</SyncMan>
 			<SyncMan>008ede002000010004000000000000000200008e20010000</SyncMan>
 			<Fmmu>0000000000000000001c00020100000001000000000000000000000000000000</Fmmu>
 			<Fmmu>0000000000000000008e00010100000002000000000000000000000000000000</Fmmu>
 			<Fmmu>00000000000000000d0800010100000003000000000000000000000000000000</Fmmu>
 			<SwitchPortData>00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</SwitchPortData>
 			<BootStrapData>0010140200141402</BootStrapData>
+			<SuName>PMPS</SuName>
 			<DcMode>4672656552756e0000000000000000004672656552756e00000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000</DcMode>
 			<DcMode>4443000000000000000000000000000044432d53796e6368726f6e000000000000000000000000000000000000000000000000000000000000000000000020030100000000000000000000000000000000000000000000000000000000000000</DcMode>
 			<Pdo Name="SYNC Inputs" Index="#x1a01" Flags="#x0010" SyncMan="3">
@@ -1122,7 +1162,7 @@
 				</Entry>
 			</Pdo>
 			<Pdo Name="IO Inputs" Index="#x1a08" Flags="#x0020" SyncMan="3">
-				<Entry Name="CurrentBP" Index="#x6000" Sub="#x01">
+				<Entry Name="CurrentBP" BitLen="240" Index="#x6000" Sub="#x01">
 					<Type GUID="{292CD354-C7C0-4A61-AAD0-1C85DD69646B}">ST_BeamParams_IO</Type>
 				</Entry>
 			</Pdo>
@@ -1135,6 +1175,9 @@
 				</Entry>
 				<Entry Name="MR2K3_Y_ENC" BitLen="64" Index="#x7000" Sub="#x03">
 					<Type>ULINT</Type>
+				</Entry>
+				<Entry Name="FFO" BitLen="8" Index="#x7000" Sub="#x04">
+					<Type>BOOL</Type>
 				</Entry>
 			</Pdo>
 			<CoeProfile ProfileNo="5001"/>
