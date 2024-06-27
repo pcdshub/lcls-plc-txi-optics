@@ -6,11 +6,12 @@ VAR
     // M1K3
     // Motors
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Yup]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Yup]^STM Status^Status^Digital input 2'}
+                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Yup]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M1K3_Yupdwn]^FB Inputs Channel 1^Position'}
     {attribute 'pytmc' := '
         pv: MR1K3:SOMS:MMS:YUP
     '}
-    M1 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M1K3 Yup
+    M1 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Yup
     fbMotionStage_m1 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Ydwn]^STM Status^Status^Digital input 1;
@@ -18,15 +19,16 @@ VAR
     {attribute 'pytmc' := '
         pv: MR1K3:SOMS:MMS:YDWN
     '}
-    M2 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M1K3 Ydwn
+    M2 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Ydwn
     fbMotionStage_m2 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Xup]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xup]^STM Status^Status^Digital input 2'}
+                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xup]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M1K3_Xupdwn]^FB Inputs Channel 1^Position'}
     {attribute 'pytmc' := '
         pv: MR1K3:SOMS:MMS:XUP
     '}
-    M3 : DUT_MotionStage := (fVelocity:=300.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M1K3 Xup
+    M3 : DUT_MotionStage := (fVelocity:=300.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Xup
     fbMotionStage_m3 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 1;
@@ -34,15 +36,16 @@ VAR
     {attribute 'pytmc' := '
         pv: MR1K3:SOMS:MMS:XDWN
     '}
-    M4 : DUT_MotionStage := (fVelocity:=300.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M1K3 Xdwn
+    M4 : DUT_MotionStage := (fVelocity:=300.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Xdwn
     fbMotionStage_m4 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_PitchCoarse]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_PitchCoarse]^STM Status^Status^Digital input 2'}
+                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_PitchCoarse]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M1K3_Pitch]^FB Inputs Channel 1^Position'}
     {attribute 'pytmc' := '
         pv: MR1K3:SOMS:MMS:PITCH
     '}
-    M5 : DUT_MotionStage := (fVelocity:=50.0); // M1K3 Pitch Stepper
+    M5 : DUT_MotionStage := (fVelocity:=50.0,  bPowerSelf:=True); // M1K3 Pitch Stepper
 
     {attribute 'TcLinkTo' := '.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M1K3_STO]^Channel 1^Input;
                               .fbRunHOMS.bSTOEnable2:=TIIB[EL1004_M1K3_STO]^Channel 2^Input;
@@ -95,11 +98,12 @@ VAR
     // M2K3
     // Motors
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Yup]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Yup]^STM Status^Status^Digital input 2'}
+                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Yup]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 1^Position'}
     {attribute 'pytmc' := '
         pv: MR2K3:SOMS:MMS:YUP
     '}
-    M6 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M2K3 Yup
+    M6 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Yup
     fbMotionStage_m6 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Ydwn]^STM Status^Status^Digital input 1;
@@ -107,15 +111,16 @@ VAR
     {attribute 'pytmc' := '
         pv: MR2K3:SOMS:MMS:YDWN
     '}
-    M7 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M2K3 Ydwn
+    M7 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Ydwn
     fbMotionStage_m7 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Xup]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xup]^STM Status^Status^Digital input 2'}
+                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xup]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M2K3_Xupdwn]^FB Inputs Channel 1^Position'}
     {attribute 'pytmc' := '
         pv: MR2K3:SOMS:MMS:XUP
     '}
-    M8 : DUT_MotionStage := (fVelocity:=150.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M2K3 Xup
+    M8 : DUT_MotionStage := (fVelocity:=150.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Xup
     fbMotionStage_m8 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 1;
@@ -123,15 +128,16 @@ VAR
     {attribute 'pytmc' := '
         pv: MR2K3:SOMS:MMS:XDWN
     '}
-    M9 : DUT_MotionStage := (fVelocity:=150.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M2K3 Xdwn
+    M9 : DUT_MotionStage := (fVelocity:=150.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Xdwn
     fbMotionStage_m9 : FB_MotionStage;
 
     {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_PitchCoarse]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_PitchCoarse]^STM Status^Status^Digital input 2'}
+                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_PitchCoarse]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M2K3_Pitch]^FB Inputs Channel 1^Position'}
     {attribute 'pytmc' := '
         pv: MR2K3:SOMS:MMS:PITCH
     '}
-    M10 : DUT_MotionStage := (fVelocity:=50.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS); // M2K3 Pitch Stepper
+    M10 : DUT_MotionStage := (fVelocity:=50.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Pitch Stepper
 
     {attribute 'TcLinkTo' := '.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M2K3_STO]^Channel 1^Input;
                               .fbRunHOMS.bSTOEnable2:=TIIB[EL1004_M2K3_STO]^Channel 2^Input;
@@ -317,7 +323,8 @@ fbMotionStage_m10(stMotionStage:=M10);
 
 // MR1K3 Flow Pressure Sensors
 fbCoolingPanelMR1K3();
-fbCoolingPanelMR2K3();]]></ST>
+fbCoolingPanelMR2K3();
+PRG_1_PlcTask();]]></ST>
     </Implementation>
   </POU>
 </TcPlcObject>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="PRG_MR2K3_SOMS" Id="{c6c9f228-e9c7-4457-bb59-9bf818f4747f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_MR2K3_SOMS
+VAR
+    {attribute 'TcLinkTo' := 'TIIB[PMPS_PRE]^IO Outputs^MR2K3_Y_ENC'}
+    nMR2K3_Y_ENC_PMPS AT %Q* : ULINT;
+    {attribute 'TcLinkTo' := 'TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 1^Status^Ready'}
+    bMR2K3_Y_ENC_Ready AT %I* : BOOL;
+    {attribute 'TcLinkTo' := 'TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 1^Status^TxPDO State'}
+    bMR2K3_Y_ENC_TxPDO AT %I* : BOOL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[nMR2K3_Y_ENC_PMPS := MAIN.M6.nRawEncoderULINT;]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
