@@ -1,0 +1,21 @@
+
+Pragmas
+-------
+
+.. csv-table::
+    :header: PLC Name, Total Pragmas, Errors
+    :align: center
+
+    :ref:`txi_optics <txi_optics_overview_pragmas>`, 59, 0
+
+
+.. _txi_optics_overview_pragmas:
+
+
+txi_optics
+^^^^^^^^^^
+
+Total pragmas found: 59
+Total linter errors: 0
+
+
