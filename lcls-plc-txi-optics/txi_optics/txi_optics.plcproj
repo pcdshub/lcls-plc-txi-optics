@@ -13,6 +13,10 @@
     <Implicit_KindOfTask>{70bdf87f-d7ec-4c0c-9ce1-21b48883b6c2}</Implicit_KindOfTask>
     <Implicit_Jitter_Distribution>{c482bf9a-c5ae-4ecb-b5e6-7c71236a40cc}</Implicit_Jitter_Distribution>
     <LibraryReferences>{03a47a21-13f8-42a1-b3e6-311cae92cd92}</LibraryReferences>
+    <Company>SLAC</Company>
+    <Released>false</Released>
+    <Title>lcls-plc-txi-optics</Title>
+    <ProjectVersion>0.0.0</ProjectVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="GVLs\GVL_COM_Buffers.TcGVL">
