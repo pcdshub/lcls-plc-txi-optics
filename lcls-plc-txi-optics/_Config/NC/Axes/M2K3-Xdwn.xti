@@ -1326,8 +1326,8 @@ External Setpoint Generation:
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
 			<EncPara ScaleFactorNumerator="1" ScaleFactorDenominator="1000" MaxCount="#xffffffff">
-				<SoftEndMinControl Enable="true" Range="15730"/>
-				<SoftEndMaxControl Enable="true" Range="22780"/>
+				<SoftEndMinControl Enable="true" Range="18074"/>
+				<SoftEndMaxControl Enable="true" Range="19674"/>
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">
