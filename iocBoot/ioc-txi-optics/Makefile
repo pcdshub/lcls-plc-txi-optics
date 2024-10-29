@@ -9,6 +9,6 @@ PROJECT_PATH := ../../lcls-plc-txi-optics/lcls-plc-txi-optics.tsproj
 PLC := txi_optics
 
 PYTMC_OPTS := 
-PREFIX := PLC:TXI:OPTICS
+PREFIX := PLC:TXI:KFE:OPTICS
 
 include $(IOC_TOP)/iocBoot/templates/Makefile.base
