@@ -1318,7 +1318,7 @@ External Setpoint Generation:
 	<Axis Id="8" CreateSymbols="true" AxisType="1" AxisFolder="M2K3">
 		<Name>__FILENAME__</Name>
 		<AxisPara>
-			<General UnitName=""/>
+			<General UnitName="um"/>
 			<Dynamic AccelerationMaximum="1000" DecelerationMaximum="1000" Acceleration="1000" Deceleration="1000" Jerk="5000" DelayTime="0.008"/>
 			<Velo Maximum="150"/>
 			<TargetPosControl Range="0.05" Time="0.01"/>
@@ -1326,8 +1326,8 @@ External Setpoint Generation:
 		</AxisPara>
 		<Encoder Name="Enc" EncType="29">
 			<EncPara ScaleFactorNumerator="1" ScaleFactorDenominator="1000" MaxCount="#xffffffff">
-				<SoftEndMinControl Enable="true" Range="16950"/>
-				<SoftEndMaxControl Enable="true" Range="23800"/>
+				<SoftEndMinControl Enable="true" Range="19294"/>
+				<SoftEndMaxControl Enable="true" Range="20694"/>
 				<Inc RefSoftSyncMask="#x0000ffff"/>
 			</EncPara>
 			<Vars VarGrpType="1">

@@ -1349,7 +1349,7 @@ External Setpoint Generation:
 		</DataType>
 	</DataTypes>
 	<Project GUID="{6F8D8EEF-45CD-488B-9616-A25D9A723693}" Name="txi_optics" PrjFilePath="..\..\txi_optics\txi_optics.plcproj" TmcFilePath="..\..\txi_optics\txi_optics.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_optics\txi_optics.tmc" TmcHash="{F6C724FE-CAB1-F420-0E8F-16AE6323627A}">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="txi_optics\txi_optics.tmc" TmcHash="{ED650691-0B2F-F557-E678-94395C90B2EF}">
 			<Name>txi_optics Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -2227,6 +2227,7 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^MAIN.M1K3.fbRunHOMS.stXdwnEnc^Count" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^MAIN.M1K3.fbRunHOMS.stXupEnc^Count" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^MAIN.M3.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.M4.nRawEncoderULINT" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL5042_M1K3_Yupdwn">
 				<Link VarA="PlcTask Inputs^MAIN.M1.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
@@ -2323,6 +2324,7 @@ External Setpoint Generation:
 				<Link VarA="PlcTask Inputs^MAIN.M2K3.fbRunHOMS.stXdwnEnc^Count" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^MAIN.M2K3.fbRunHOMS.stXupEnc^Count" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^MAIN.M8.nRawEncoderULINT" VarB="FB Inputs Channel 1^Position" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^MAIN.M9.nRawEncoderULINT" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M2K3^EL5042_M2K3_Yupdwn">
 				<Link VarA="PlcTask Inputs^MAIN.M2K3.fbRunHOMS.stYdwnEnc^Count" VarB="FB Inputs Channel 2^Position" AutoLink="true"/>

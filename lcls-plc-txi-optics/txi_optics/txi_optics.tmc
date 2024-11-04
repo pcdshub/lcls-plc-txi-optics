@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{F6C724FE-CAB1-F420-0E8F-16AE6323627A}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{ED650691-0B2F-F557-E678-94395C90B2EF}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComSerialLineMode_t</Name>
@@ -69448,7 +69448,8 @@ ELSE:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M1K3_Xupdwn]^FB Inputs Channel 2^Position</Value>
               </Property>
               <Property>
                 <Name>pytmc</Name>
@@ -69750,7 +69751,8 @@ ELSE:
               <Property>
                 <Name>TcLinkTo</Name>
                 <Value>.bLimitForwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 1;
-                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 2</Value>
+                              .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 2;
+                              .nRawEncoderULINT:=TIIB[EL5042_M2K3_Xupdwn]^FB Inputs Channel 2^Position</Value>
               </Property>
               <Property>
                 <Name>pytmc</Name>
@@ -71068,7 +71070,7 @@ ELSE:
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-06-27T16:09:58</Value>
+          <Value>2024-10-04T15:12:55</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
