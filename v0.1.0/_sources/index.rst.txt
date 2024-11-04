@@ -1,0 +1,30 @@
+lcls-plc-txi-optics
+-------------------
+
+.. toctree::
+    :maxdepth: 2
+    :caption: lcls-plc-txi-optics
+
+    lcls-plc-txi-optics_pragmas
+    lcls-plc-txi-optics_nc
+    lcls-plc-txi-optics_ethercat
+    lcls-plc-txi-optics_boxes
+    lcls-plc-txi-optics_links
+
+
+.. toctree::
+    :maxdepth: 2
+    :caption: txi_optics
+
+    lcls-plc-txi-optics_txi_optics_summary
+    lcls-plc-txi-optics_txi_optics_epics
+    lcls-plc-txi-optics_txi_optics_source
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

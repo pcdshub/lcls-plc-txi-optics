@@ -1,0 +1,678 @@
+
+
+DUTs
+----
+
+
+GVLs
+----
+
+
+Global_Version
+^^^^^^^^^^^^^^
+
+::
+
+    {attribute 'TcGenerated'}
+    {attribute 'no-analysis'}
+    {attribute 'linkalways'}
+    // This function has been automatically generated from the project information.
+    VAR_GLOBAL CONSTANT
+        {attribute 'const_non_replaced'}
+        stLibVersion_lcls_plc_txi_optics : ST_LibVersion := (iMajor := 0, iMinor := 1, iBuild := 0, iRevision := 0, nFlags := 1, sVersion := '0.1.0');
+    END_VAR
+
+
+
+
+GVL_COM_Buffers
+^^^^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+        // M1K3
+        Serial_RXBuffer_M1K3 : ComBuffer;
+        Serial_TXBuffer_M1K3 : ComBuffer;
+
+        // M2K3
+        Serial_RXBuffer_M2K3 : ComBuffer;
+        Serial_TXBuffer_M2K3 : ComBuffer;
+    END_VAR
+
+
+
+
+GVL_M1K3
+^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    VAR_GLOBAL
+        // Pitch Mechanism:
+        {attribute 'TcLinkTo' := '.diEncCnt:=TIIB[EL5042_M1K3_Pitch]^FB Inputs Channel 1^Position'}
+        M1K3_Pitch : HOMS_PitchMechanism := (ReqPosLimHi := 1,
+                                             ReqPosLimLo := -1,
+                                             diEncPosLimHi := 1,
+                                             diEncPosLimLo := -1);
+    END_VAR
+
+
+
+
+GVL_M1K3_Constants
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    VAR_GLOBAL CONSTANT
+        // Encoder reference values in counts = nm
+        // Enc Ref Vals from FAT
+        nYUP_ENC_REF : ULINT := 108743550;
+        nYDWN_ENC_REF : ULINT := 108243370;
+        nXUP_ENC_REF : ULINT := 19628100;
+        nXDWN_ENC_REF : ULINT := 20865800;
+    END_VAR
+
+
+
+
+GVL_M2K3
+^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    VAR_GLOBAL
+        // Pitch Mechanism
+        {attribute 'TcLinkTo' := '.diEncCnt:=TIIB[EL5042_M2K3_Pitch]^FB Inputs Channel 1^Position'}
+        M2K3_Pitch : HOMS_PitchMechanism := (ReqPosLimHi := 58900,
+                                             ReqPosLimLo := 57500,
+                                             diEncPosLimHi := 10602000,
+                                             diEncPosLimLo := 10350000);
+    END_VAR
+
+
+
+
+GVL_M2K3_Constants
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    VAR_GLOBAL CONSTANT
+        // Encoder reference values in counts = nm
+        // Enc Ref Vals after realignment with metrology
+        nYUP_ENC_REF : ULINT := 40653120;
+        nYDWN_ENC_REF : ULINT := 43456180;
+        nXUP_ENC_REF : ULINT := 23635520;
+        nXDWN_ENC_REF : ULINT := 22541650;
+    END_VAR
+
+
+
+
+GVL_PMPS
+^^^^^^^^
+
+::
+
+    {attribute 'qualified_only'}
+    VAR_GLOBAL
+        {attribute 'pytmc' := 'pv: PLC:TXI:KFE:OPTICS:ARB:01'}
+        fbArbiter1: FB_Arbiter(1);
+        {attribute 'pytmc' := 'pv: PLC:TXI:KFE:OPTICS:ARB:02'}
+        fbArbiter2: FB_Arbiter(2);
+        {attribute 'pytmc' := 'pv: PLC:TXI:KFE:OPTICS:FFO:01'}
+        {attribute 'TcLinkTo' := '.q_xFastFaultOut:=TIIB[PMPS_PRE]^IO Outputs^FFO'}
+        fbFastFaultOutput1: FB_HardwareFFOutput := (bAutoReset := TRUE , i_sNetID:='172.21.42.126.1.1' );
+    END_VAR
+
+
+
+
+GVL_SerialIO
+^^^^^^^^^^^^
+
+::
+
+    VAR_GLOBAL
+        //Better have your inputs and outputs!
+        // M1K3
+        Serial_stComIn_M1K3   AT %I*	:	EL6inData22B (*KL6inData22B*);
+        Serial_stComOut_M1K3  AT %Q*	:	EL6outData22B (*KL6outData22B*);
+
+        // M2L0
+        Serial_stComIn_M2K3   AT %I*	:	EL6inData22B (*KL6inData22B*);
+        Serial_stComOut_M2K3  AT %Q*	:	EL6outData22B (*KL6outData22B*);
+    END_VAR
+
+
+
+
+POUs
+----
+
+
+MAIN
+^^^^
+
+::
+
+    PROGRAM MAIN
+    VAR
+        // M1K3
+        // Motors
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Yup]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Yup]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M1K3_Yupdwn]^FB Inputs Channel 1^Position'}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:MMS:YUP
+        '}
+        M1 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Yup
+        fbMotionStage_m1 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Ydwn]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Ydwn]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:MMS:YDWN
+        '}
+        M2 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Ydwn
+        fbMotionStage_m2 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Xup]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xup]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M1K3_Xupdwn]^FB Inputs Channel 1^Position'}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:MMS:XUP
+        '}
+        M3 : DUT_MotionStage := (fVelocity:=300.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Xup
+        fbMotionStage_m3 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M1K3_Xupdwn]^FB Inputs Channel 2^Position'}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:MMS:XDWN
+        '}
+        M4 : DUT_MotionStage := (fVelocity:=300.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M1K3 Xdwn
+        fbMotionStage_m4 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_PitchCoarse]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M1K3_PitchCoarse]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M1K3_Pitch]^FB Inputs Channel 1^Position'}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:MMS:PITCH
+        '}
+        M5 : DUT_MotionStage := (fVelocity:=50.0,  bPowerSelf:=True); // M1K3 Pitch Stepper
+
+        {attribute 'TcLinkTo' := '.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M1K3_STO]^Channel 1^Input;
+                                  .fbRunHOMS.bSTOEnable2:=TIIB[EL1004_M1K3_STO]^Channel 2^Input;
+                                  .fbRunHOMS.stYupEnc.Count:=TIIB[EL5042_M1K3_Yupdwn]^FB Inputs Channel 1^Position;
+                                  .fbRunHOMS.stYdwnEnc.Count:=TIIB[EL5042_M1K3_Yupdwn]^FB Inputs Channel 2^Position;
+                                  .fbRunHOMS.stXupEnc.Count:=TIIB[EL5042_M1K3_Xupdwn]^FB Inputs Channel 1^Position;
+                                  .fbRunHOMS.stXdwnEnc.Count:=TIIB[EL5042_M1K3_Xupdwn]^FB Inputs Channel 2^Position'}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS
+        '}
+        M1K3 : DUT_HOMS;
+
+        // Encoder Arrays/RMS Watch:
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:ENC:Y
+        '}
+        fbYRMSErrorM1K3 : FB_RMSWatch;
+        fMaxYRMSErrorM1K3 : LREAL;
+        fMinYRMSErrorM1K3 : LREAL;
+
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:ENC:X
+        '}
+        fbXRMSErrorM1K3 : FB_RMSWatch;
+        fMaxXRMSErrorM1K3 : LREAL;
+        fMinXRMSErrorM1K3 : LREAL;
+
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:ENC:PITCH
+        '}
+        fbPitchRMSErrorM1K3 : FB_RMSWatch;
+        fMaxPitchRMSErrorM1K3 : LREAL;
+        fMinPitchRMSErrorM1K3 : LREAL;
+
+        // Pitch Control
+        fbM1K3PitchControl : FB_PitchControl;
+        bM1K3PitchDone : BOOL;
+        bM1K3PitchBusy : BOOL;
+
+        {attribute 'TcLinkTo' := 'TIIB[EL2004_M1K3_VCV]^Channel 1^Output'}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS:VCV
+            io: io
+            field: ZNAM OFF
+            field: ONAM ON
+        '}
+        bActivateVarCoolMR1K3 AT %Q* : BOOL;
+
+
+        // M2K3
+        // Motors
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Yup]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Yup]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 1^Position'}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:MMS:YUP
+        '}
+        M6 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Yup
+        fbMotionStage_m6 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Ydwn]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Ydwn]^STM Status^Status^Digital input 2'}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:MMS:YDWN
+        '}
+        M7 : DUT_MotionStage := (fVelocity:=100.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Ydwn
+        fbMotionStage_m7 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Xup]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xup]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M2K3_Xupdwn]^FB Inputs Channel 1^Position'}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:MMS:XUP
+        '}
+        M8 : DUT_MotionStage := (fVelocity:=150.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Xup
+        fbMotionStage_m8 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M2K3_Xupdwn]^FB Inputs Channel 2^Position'}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:MMS:XDWN
+        '}
+        M9 : DUT_MotionStage := (fVelocity:=150.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Xdwn
+        fbMotionStage_m9 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_PitchCoarse]^STM Status^Status^Digital input 1;
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M2K3_PitchCoarse]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M2K3_Pitch]^FB Inputs Channel 1^Position'}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:MMS:PITCH
+        '}
+        M10 : DUT_MotionStage := (fVelocity:=50.0, nEnableMode:=ENUM_StageEnableMode.ALWAYS,  bPowerSelf:=True); // M2K3 Pitch Stepper
+
+        {attribute 'TcLinkTo' := '.fbRunHOMS.bSTOEnable1:=TIIB[EL1004_M2K3_STO]^Channel 1^Input;
+                                  .fbRunHOMS.bSTOEnable2:=TIIB[EL1004_M2K3_STO]^Channel 2^Input;
+                                  .fbRunHOMS.stYupEnc.Count:=TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 1^Position;
+                                  .fbRunHOMS.stYdwnEnc.Count:=TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 2^Position;
+                                  .fbRunHOMS.stXupEnc.Count:=TIIB[EL5042_M2K3_Xupdwn]^FB Inputs Channel 1^Position;
+                                  .fbRunHOMS.stXdwnEnc.Count:=TIIB[EL5042_M2K3_Xupdwn]^FB Inputs Channel 2^Position'}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS
+        '}
+        M2K3 : DUT_HOMS;
+
+        // Encoder Arrays/RMS Watch:
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:ENC:Y
+        '}
+        fbYRMSErrorM2K3 : FB_RMSWatch;
+        fMaxYRMSErrorM2K3 : LREAL;
+        fMinYRMSErrorM2K3 : LREAL;
+
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:ENC:X
+        '}
+        fbXRMSErrorM2K3 : FB_RMSWatch;
+        fMaxXRMSErrorM2K3 : LREAL;
+        fMinXRMSErrorM2K3 : LREAL;
+
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:ENC:PITCH
+        '}
+        fbPitchRMSErrorM2K3 : FB_RMSWatch;
+        fMaxPitchRMSErrorM2K3 : LREAL;
+        fMinPitchRMSErrorM2K3 : LREAL;
+
+        // Pitch Control
+        fbM2K3PitchControl : FB_PitchControl;
+        bM2K3PitchDone : BOOL;
+        bM2K3PitchBusy : BOOL;
+
+        // Lost serial comm to E621 controller, unsure why...
+        fbMotionStage_m10 : FB_MotionStage;
+
+        {attribute 'TcLinkTo' := 'TIIB[EL2004_M2K3_VCV]^Channel 1^Output'}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS:VCV
+            io: io
+            field: ZNAM OFF
+            field: ONAM ON
+        '}
+        bActivateVarCoolMR2K3 AT %Q* : BOOL;
+
+         // MR1K3 Flow Press Sensors
+        {attribute 'TcLinkTo' := '.fbFlow_1.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 1^Value;
+                                     .fbFlow_2.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 2^Value;
+                                  .fbPress_1.iRaw := TIIB[EL3054_M1K3_FWM_PRSM]^AI Standard Channel 3^Value
+        '}
+        {attribute 'pytmc' := '
+            pv: MR1K3:SOMS
+        '}
+        fbCoolingPanelMR1K3 : FB_Axilon_Cooling_2f1p;
+
+        // MR2K3 Flow Press Sensors
+        {attribute 'TcLinkTo' := '.fbFlow_1.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 1^Value;
+                                     .fbFlow_2.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 2^Value;
+                                  .fbPress_1.iRaw := TIIB[EL3054_M2K3_FWM_PRSM]^AI Standard Channel 3^Value
+        '}
+        {attribute 'pytmc' := '
+            pv: MR2K3:SOMS
+        '}
+        fbCoolingPanelMR2K3 : FB_Axilon_Cooling_2f1p;
+    END_VAR
+    // M1K3
+    M1K3.fbRunHOMS(stYup:=M1,
+                   stYdwn:=M2,
+                   stXup:=M3,
+                   stXdwn:=M4,
+                   stPitch:=M5,
+                   nYupEncRef:=GVL_M1K3_Constants.nYUP_ENC_REF,
+                   nYdwnEncRef:=GVL_M1K3_Constants.nYDWN_ENC_REF,
+                   nXupEncRef:=GVL_M1K3_Constants.nXUP_ENC_REF,
+                   nXdwnEncRef:=GVL_M1K3_Constants.nXDWN_ENC_REF,
+                   bExecuteCoupleY:=M1K3.bExecuteCoupleY,
+                   bExecuteCoupleX:=M1K3.bExecuteCoupleX,
+                   bExecuteDecoupleY:=M1K3.bExecuteDecoupleY,
+                   bExecuteDecoupleX:=M1K3.bExecuteDecoupleX,
+                   bGantryAlreadyCoupledY=>M1K3.bGantryAlreadyCoupledY,
+                   bGantryAlreadyCoupledX=>M1K3.bGantryAlreadyCoupledX,
+                   nCurrGantryY=>M1K3.nCurrGantryY,
+                   nCurrGantryX=>M1K3.nCurrGantryX);
+
+    // Convert nCurrGantry to um (smaller number) to read out in epics
+    M1K3.fCurrGantryY_um := LINT_TO_REAL(M1K3.nCurrGantryY) / 1000.0;
+    M1K3.fCurrGantryX_um := LINT_TO_REAL(M1K3.nCurrGantryX) / 1000.0;
+
+    // FB_MotionStage's for non-piezo axes
+    fbMotionStage_m1(stMotionStage:=M1);
+    fbMotionStage_m2(stMotionStage:=M2);
+    fbMotionStage_m3(stMotionStage:=M3);
+    fbMotionStage_m4(stMotionStage:=M4);
+
+    // Calculate Pitch RMS Error:
+    fbYRMSErrorM1K3(stMotionStage:=M1,
+                    fMaxRMSError=>fMaxYRMSErrorM1K3,
+                    fMinRMSError=>fMinYRMSErrorM1K3);
+
+    fbXRMSErrorM1K3(stMotionStage:=M3,
+                    fMaxRMSError=>fMaxXRMSErrorM1K3,
+                    fMinRMSError=>fMinXRMSErrorM1K3);
+
+    fbPitchRMSErrorM1K3(stMotionStage:=M5,
+                        fMaxRMSError=>fMaxPitchRMSErrorM1K3,
+                        fMinRMSError=>fMinPitchRMSErrorM1K3);
+
+    // Pitch Control
+    fbM1K3PitchControl(Pitch:=GVL_M1K3.M1K3_Pitch,
+                       Stepper:=M5,
+                       lrCurrentSetpoint:=M5.fPosition,
+                       q_bDone=>bM1K3PitchDone,
+                       q_bBusy=>bM1K3PitchBusy);
+    // When STO hit, need to reset SP
+    IF NOT M5.bHardwareEnable THEN
+        M5.fPosition := M5.stAxisStatus.fActPosition;
+    END_IF
+
+    // M2K3
+    M2K3.fbRunHOMS(stYup:=M6,
+                   stYdwn:=M7,
+                   stXup:=M8,
+                   stXdwn:=M9,
+                   stPitch:=M10,
+                   nYupEncRef:=GVL_M2K3_Constants.nYUP_ENC_REF,
+                   nYdwnEncRef:=GVL_M2K3_Constants.nYDWN_ENC_REF,
+                   nXupEncRef:=GVL_M2K3_Constants.nXUP_ENC_REF,
+                   nXdwnEncRef:=GVL_M2K3_Constants.nXDWN_ENC_REF,
+                   bExecuteCoupleY:=M2K3.bExecuteCoupleY,
+                   bExecuteCoupleX:=M2K3.bExecuteCoupleX,
+                   bExecuteDecoupleY:=M2K3.bExecuteDecoupleY,
+                   bExecuteDecoupleX:=M2K3.bExecuteDecoupleX,
+                   bGantryAlreadyCoupledY=>M2K3.bGantryAlreadyCoupledY,
+                   bGantryAlreadyCoupledX=>M2K3.bGantryAlreadyCoupledX,
+                   nCurrGantryY=>M2K3.nCurrGantryY,
+                   nCurrGantryX=>M2K3.nCurrGantryX);
+
+    // Convert nCurrGantry to um (smaller number) to read out in epics
+    M2K3.fCurrGantryY_um := LINT_TO_REAL(M2K3.nCurrGantryY) / 1000;
+    M2K3.fCurrGantryX_um := LINT_TO_REAL(M2K3.nCurrGantryX) / 1000;
+
+    // FB_MotionStage's for non-piezo axes
+    fbMotionStage_m6(stMotionStage:=M6);
+    fbMotionStage_m7(stMotionStage:=M7);
+    fbMotionStage_m8(stMotionStage:=M8);
+    fbMotionStage_m9(stMotionStage:=M9);
+
+    // Calculate RMS Error:
+    fbYRMSErrorM2K3(stMotionStage:=M6,
+                    fMaxRMSError=>fMaxYRMSErrorM2K3,
+                    fMinRMSError=>fMinYRMSErrorM2K3);
+
+    fbXRMSErrorM2K3(stMotionStage:=M8,
+                    fMaxRMSError=>fMaxXRMSErrorM2K3,
+                    fMinRMSError=>fMinXRMSErrorM2K3);
+
+    fbPitchRMSErrorM2K3(stMotionStage:=M10,
+                        fMaxRMSError=>fMaxPitchRMSErrorM2K3,
+                        fMinRMSError=>fMinPitchRMSErrorM2K3);
+
+    (*
+    3-15-20: Lost serial comm with E621 controller, unsure why....
+    // Pitch Control
+    fbM2K3PitchControl(Pitch:=GVL_M2K3.M2K3_Pitch,
+                       Stepper:=M10,
+                       lrCurrentSetpoint:=M10.fPosition,
+                       q_bDone=>bM2K3PitchDone,
+                       q_bBusy=>bM2K3PitchBusy);
+    // When STO hit, need to reset SP
+    IF NOT M10.bHardwareEnable THEN
+        M10.fPosition := M10.stAxisStatus.fActPosition;
+    END_IF
+    *)
+    fbMotionStage_m10(stMotionStage:=M10);
+
+    // MR1K3 Flow Pressure Sensors
+    fbCoolingPanelMR1K3();
+    fbCoolingPanelMR2K3();
+    PRG_1_PlcTask();
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_M1K3`_
+    * `GVL_M1K3_Constants`_
+    * `GVL_M2K3`_
+    * `GVL_M2K3_Constants`_
+    * `PRG_1_PlcTask`_
+
+
+P_Serial_Com
+^^^^^^^^^^^^
+
+::
+
+    PROGRAM P_Serial_Com
+    VAR
+        fbSerialLineControl_EL6001_M1K3: SerialLineControl;
+        fbSerialLineControl_EL6001_M2K3: SerialLineControl;
+    END_VAR
+    //These are the global IOs...don't forget to copy your data into them
+
+    (* EL6001 Serial port 0 com function *)
+    fbSerialLineControl_EL6001_M1K3(Mode:= SERIALLINEMODE_EL6_22B (*SERIALLINEMODE_KL6_22B_STANDARD*),
+                                    pComIn:= ADR(Serial_stComIn_M1K3),
+                                       pComOut:=ADR(Serial_stComOut_M1K3),
+                                    SizeComIn:= SIZEOF(Serial_stComIn_M1K3),
+                                    TxBuffer:= Serial_TXBuffer_M1K3,
+                                    RxBuffer:= Serial_RXBuffer_M1K3,
+                                    Error=> ,
+                                    ErrorID=> );
+
+    fbSerialLineControl_EL6001_M2K3(Mode:= SERIALLINEMODE_EL6_22B (*SERIALLINEMODE_KL6_22B_STANDARD*),
+                                    pComIn:= ADR(Serial_stComIn_M2K3),
+                                       pComOut:=ADR(Serial_stComOut_M2K3),
+                                    SizeComIn:= SIZEOF(Serial_stComIn_M2K3),
+                                    TxBuffer:= Serial_TXBuffer_M2K3,
+                                    RxBuffer:= Serial_RXBuffer_M2K3,
+                                    Error=> ,
+                                    ErrorID=> );
+
+    END_PROGRAM
+
+
+
+
+PiezoSerial
+^^^^^^^^^^^
+
+::
+
+    PROGRAM PiezoSerial
+    VAR
+        //PI Serial
+        fbE621SerialDriver_M1K3 : FB_PI_E621_SerialDriver;
+        rtInitParams_M1K3	:	R_TRIG;
+        tonTimeoutRst_M1K3	: TON := (PT:=T#2S); //For timeout reset
+
+        fbE621SerialDriver_M2K3 : FB_PI_E621_SerialDriver;
+        rtInitParams_M2K3	:	R_TRIG;
+        tonTimeoutRst_M2K3	: TON := (PT:=T#2S); //For timeout reset
+    END_VAR
+    //Piezo E-621
+    ///////////////////////
+    fbE621SerialDriver_M1K3.i_xExecute := TRUE;
+    fbE621SerialDriver_M1K3.i_xExecute R= fbE621SerialDriver_M1K3.q_xDone;
+    fbE621SerialDriver_M1K3(iq_stPiezoAxis:= GVL_M1K3.M1K3_Pitch.Piezo,
+                            iq_stSerialRXBuffer:= Serial_RXBuffer_M1K3,
+                            iq_stSerialTXBuffer:= Serial_TXBuffer_M1K3);
+
+    fbE621SerialDriver_M2K3.i_xExecute := TRUE;
+    fbE621SerialDriver_M2K3.i_xExecute R= fbE621SerialDriver_M2K3.q_xDone;
+    fbE621SerialDriver_M2K3(iq_stPiezoAxis:= GVL_M2K3.M2K3_Pitch.Piezo,
+                            iq_stSerialRXBuffer:= Serial_RXBuffer_M2K3,
+                            iq_stSerialTXBuffer:= Serial_TXBuffer_M2K3);
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_M1K3`_
+    * `GVL_M2K3`_
+
+
+PRG_1_PlcTask
+^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_1_PlcTask
+    VAR
+    END_VAR
+    PRG_2_PMPS_POST();
+    PRG_MR1K3_SOMS();
+    PRG_MR2K3_SOMS();
+
+    END_PROGRAM
+
+
+Related:
+    * `PRG_2_PMPS_POST`_
+    * `PRG_MR1K3_SOMS`_
+    * `PRG_MR2K3_SOMS`_
+
+
+PRG_2_PMPS_POST
+^^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_2_PMPS_POST
+    VAR
+        fbArbiterIO: FB_SubSysToArbiter_IO;
+        fb_vetoArbiter: FB_VetoArbiter;
+    END_VAR
+    GVL_PMPS.fbFastFaultOutput1.Execute();
+
+    fbArbiterIO(
+        Arbiter:=GVL_PMPS.fbArbiter1,
+        fbFFHWO:=GVL_PMPS.fbFastFaultOutput1);
+    //Arb2 in hutch
+    (**fb_vetoArbiter(bVeto:= PMPS_GVL.stCurrentBeamParameters.aVetoDevices[PMPS.L_Stopper.ST1L1],
+                    HigherAuthority := GVL_PMPS.fbArbiter1,
+                    LowerAuthority := GVL_PMPS.fbArbiter2,
+                    FFO := GVL_PMPS.fbFastFaultOutput1);
+    **)
+    //ff2_ff1_link_optics(
+        //io_fbFFHWO := GVL_PMPS.fbFastFaultOutput1,
+        //i_xOK :=  GVL_PMPS.fbFastFaultOutput2.q_xFastFaultOut);
+
+    //Code for Removing arbitration
+    GVL_PMPS.fbArbiter1.AddRequest(nReqID := 49, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'txi-kfe-optics');
+    GVL_PMPS.fbArbiter2.AddRequest(nReqID := 50, stReqBp := PMPS_GVL.cstFullBeam, sDevName := 'txi-kfe-optics');
+
+    //send encoder values for veto
+
+    END_PROGRAM
+
+
+Related:
+    * `GVL_PMPS`_
+
+
+PRG_MR1K3_SOMS
+^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_MR1K3_SOMS
+    VAR
+        {attribute 'TcLinkTo' := 'TIIB[PMPS_PRE]^IO Outputs^MR1K3_Y_ENC'}
+        nMR1K3_Y_ENC_PMPS AT %Q* : ULINT;
+        {attribute 'TcLinkTo' := 'TIIB[EL5042_M1K3_Yupdwn]^FB Inputs Channel 1^Status^Ready'}
+        bMR1K3_Y_ENC_Ready AT %I* : BOOL;
+        {attribute 'TcLinkTo' := 'TIIB[EL5042_M1K3_Yupdwn]^FB Inputs Channel 1^Status^TxPDO State'}
+        bMR1K3_Y_ENC_TxPDO AT %I* : BOOL;
+    END_VAR
+    nMR1K3_Y_ENC_PMPS := MAIN.M1.nRawEncoderULINT;
+
+    END_PROGRAM
+
+
+Related:
+    * `MAIN`_
+
+
+PRG_MR2K3_SOMS
+^^^^^^^^^^^^^^
+
+::
+
+    PROGRAM PRG_MR2K3_SOMS
+    VAR
+        {attribute 'TcLinkTo' := 'TIIB[PMPS_PRE]^IO Outputs^MR2K3_Y_ENC'}
+        nMR2K3_Y_ENC_PMPS AT %Q* : ULINT;
+        {attribute 'TcLinkTo' := 'TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 1^Status^Ready'}
+        bMR2K3_Y_ENC_Ready AT %I* : BOOL;
+        {attribute 'TcLinkTo' := 'TIIB[EL5042_M2K3_Yupdwn]^FB Inputs Channel 1^Status^TxPDO State'}
+        bMR2K3_Y_ENC_TxPDO AT %I* : BOOL;
+    END_VAR
+    nMR2K3_Y_ENC_PMPS := MAIN.M6.nRawEncoderULINT;
+
+    END_PROGRAM
+
+
+Related:
+    * `MAIN`_
+
