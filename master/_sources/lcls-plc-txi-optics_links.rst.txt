@@ -318,6 +318,7 @@ Links
         txi_optics Instance, PlcTask Inputs^MAIN.M4.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M1K3-Xdwn, Outputs^ToPlc
         txi_optics Instance, PlcTask Inputs^MAIN.M4.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL7047_M1K3_Xdwn, STM Status^Status^Digital input 2
         txi_optics Instance, PlcTask Inputs^MAIN.M4.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL7047_M1K3_Xdwn, STM Status^Status^Digital input 1
+        txi_optics Instance, PlcTask Inputs^MAIN.M4.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL5042_M1K3_Xupdwn, FB Inputs Channel 2^Position
         txi_optics Instance, PlcTask Inputs^MAIN.M5.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M1K3-Pitch, Outputs^ToPlc
         txi_optics Instance, PlcTask Inputs^MAIN.M5.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL7047_M1K3_PitchCoarse, STM Status^Status^Digital input 2
         txi_optics Instance, PlcTask Inputs^MAIN.M5.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL7047_M1K3_PitchCoarse, STM Status^Status^Digital input 1
@@ -336,6 +337,7 @@ Links
         txi_optics Instance, PlcTask Inputs^MAIN.M9.Axis.NcToPlc, TINC^NC-Task 1 SAF^Axes^M2K3-Xdwn, Outputs^ToPlc
         txi_optics Instance, PlcTask Inputs^MAIN.M9.bLimitBackwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M2K3^EL7047_M2K3_Xdwn, STM Status^Status^Digital input 2
         txi_optics Instance, PlcTask Inputs^MAIN.M9.bLimitForwardEnable, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M2K3^EL7047_M2K3_Xdwn, STM Status^Status^Digital input 1
+        txi_optics Instance, PlcTask Inputs^MAIN.M9.nRawEncoderULINT, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M2K3^EL5042_M2K3_Xupdwn, FB Inputs Channel 2^Position
         txi_optics Instance, PlcTask Inputs^MAIN.fbCoolingPanelMR1K3.fbFlow_1.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL3054_M1K3_FWM_PRSM, AI Standard Channel 1^Value
         txi_optics Instance, PlcTask Inputs^MAIN.fbCoolingPanelMR1K3.fbFlow_2.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL3054_M1K3_FWM_PRSM, AI Standard Channel 2^Value
         txi_optics Instance, PlcTask Inputs^MAIN.fbCoolingPanelMR1K3.fbPress_1.iRaw, TIID^Device 1 (EtherCAT)^Term 1 (EK1200)^Term 6 (EK1122)^EK1100_M1K3^EL3054_M1K3_FWM_PRSM, AI Standard Channel 3^Value

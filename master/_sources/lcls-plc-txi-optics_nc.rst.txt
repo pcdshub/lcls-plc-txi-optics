@@ -107,9 +107,9 @@ Axis 3: M1K3-Xup
     Enc:ScaleFactorDenominator, 1000
     Enc:ScaleFactorNumerator, 1
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 23200
+    Enc:SoftEndMaxControl:Range, 21576
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, 16300
+    Enc:SoftEndMinControl:Range, 20176
     General:UnitName, um
     Id, 3
     OtherSettings:AllowMotionCmdToSlave, true
@@ -141,9 +141,9 @@ Axis 4: M1K3-Xdwn
     Enc:ScaleFactorDenominator, 1000
     Enc:ScaleFactorNumerator, 1
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 24500
+    Enc:SoftEndMaxControl:Range, 22876
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, 17400
+    Enc:SoftEndMinControl:Range, 21276
     General:UnitName, um
     Id, 4
     OtherSettings:AllowMotionCmdToSlave, true
@@ -208,7 +208,7 @@ Axis 6: M2K3-Yup
     Enc:SoftEndMaxControl:Range, 115658
     Enc:SoftEndMinControl:Enable, true
     Enc:SoftEndMinControl:Range, 7250
-    General:UnitName, 
+    General:UnitName, um
     Id, 6
     OtherSettings:AllowMotionCmdToSlave, true
     TargetPosControl:Range, 0.05
@@ -275,10 +275,10 @@ Axis 8: M2K3-Xup
     Enc:ScaleFactorDenominator, 1000
     Enc:ScaleFactorNumerator, 1
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 23800
+    Enc:SoftEndMaxControl:Range, 20694
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, 16950
-    General:UnitName, 
+    Enc:SoftEndMinControl:Range, 19294
+    General:UnitName, um
     Id, 8
     OtherSettings:AllowMotionCmdToSlave, true
     TargetPosControl:Range, 0.05
@@ -311,9 +311,9 @@ Axis 9: M2K3-Xdwn
     Enc:ScaleFactorDenominator, 1000
     Enc:ScaleFactorNumerator, 1
     Enc:SoftEndMaxControl:Enable, true
-    Enc:SoftEndMaxControl:Range, 22780
+    Enc:SoftEndMaxControl:Range, 19674
     Enc:SoftEndMinControl:Enable, true
-    Enc:SoftEndMinControl:Range, 15730
+    Enc:SoftEndMinControl:Range, 18074
     General:UnitName, um
     Id, 9
     OtherSettings:AllowMotionCmdToSlave, true

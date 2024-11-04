@@ -176,7 +176,8 @@ MAIN
         fbMotionStage_m3 : FB_MotionStage;
 
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 1;
-                                  .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 2'}
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M1K3_Xdwn]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M1K3_Xupdwn]^FB Inputs Channel 2^Position'}
         {attribute 'pytmc' := '
             pv: MR1K3:SOMS:MMS:XDWN
         '}
@@ -268,7 +269,8 @@ MAIN
         fbMotionStage_m8 : FB_MotionStage;
 
         {attribute 'TcLinkTo' := '.bLimitForwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 1;
-                                  .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 2'}
+                                  .bLimitBackwardEnable:=TIIB[EL7047_M2K3_Xdwn]^STM Status^Status^Digital input 2;
+                                  .nRawEncoderULINT:=TIIB[EL5042_M2K3_Xupdwn]^FB Inputs Channel 2^Position'}
         {attribute 'pytmc' := '
             pv: MR2K3:SOMS:MMS:XDWN
         '}
