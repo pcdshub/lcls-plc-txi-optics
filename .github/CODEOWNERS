@@ -1,0 +1,20 @@
+# default group
+* @pcdshub/txi-members @pcdshub/optics-sme
+
+# language-specific group(s)
+## TWINCAT files
+*.tsproj @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.plcproj @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.tmc @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.tpr @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.xti @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.TcTTO @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.TcPOU @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.TcDUT @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.TcGVL @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.TcVis @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.TcVMO @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+*.TcGTLO @pcdshub/txi-members @pcdshub/twincat-reviewers @pcdshub/optics-sme
+
+# github folder holds administrative files
+.github/** @pcdshub/software-admin
